@@ -14,6 +14,8 @@
 		E20C1F4427A53FD8000DF905 /* HeyTaxiDriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F4327A53FD8000DF905 /* HeyTaxiDriverTests.swift */; };
 		E20C1F4E27A53FD8000DF905 /* HeyTaxiDriverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F4D27A53FD8000DF905 /* HeyTaxiDriverUITests.swift */; };
 		E20C1F5027A53FD8000DF905 /* HeyTaxiDriverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F4F27A53FD8000DF905 /* HeyTaxiDriverUITestsLaunchTests.swift */; };
+		E20C1F5E27A54107000DF905 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F5D27A54107000DF905 /* SplashView.swift */; };
+		E20C1F6027A5422B000DF905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F5F27A5422B000DF905 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		E20C1F4927A53FD8000DF905 /* HeyTaxiDriverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyTaxiDriverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20C1F4D27A53FD8000DF905 /* HeyTaxiDriverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyTaxiDriverUITests.swift; sourceTree = "<group>"; };
 		E20C1F4F27A53FD8000DF905 /* HeyTaxiDriverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyTaxiDriverUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E20C1F5D27A54107000DF905 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		E20C1F5F27A5422B000DF905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		E20C1F3127A53FD7000DF905 /* HeyTaxiDriver */ = {
 			isa = PBXGroup;
 			children = (
+				E20C1F5C27A540F2000DF905 /* View */,
 				E20C1F3227A53FD7000DF905 /* HeyTaxiDriverApp.swift */,
 				E20C1F3427A53FD7000DF905 /* ContentView.swift */,
 				E20C1F3627A53FD8000DF905 /* Assets.xcassets */,
@@ -125,6 +130,15 @@
 				E20C1F4F27A53FD8000DF905 /* HeyTaxiDriverUITestsLaunchTests.swift */,
 			);
 			path = HeyTaxiDriverUITests;
+			sourceTree = "<group>";
+		};
+		E20C1F5C27A540F2000DF905 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E20C1F5D27A54107000DF905 /* SplashView.swift */,
+				E20C1F5F27A5422B000DF905 /* MainView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E20C1F3527A53FD7000DF905 /* ContentView.swift in Sources */,
+				E20C1F6027A5422B000DF905 /* MainView.swift in Sources */,
 				E20C1F3327A53FD7000DF905 /* HeyTaxiDriverApp.swift in Sources */,
+				E20C1F5E27A54107000DF905 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
