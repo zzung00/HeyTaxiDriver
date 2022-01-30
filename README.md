@@ -9,5 +9,5 @@
 * View와 Model 사이의 의존성이 없고 View와 ViewModel 사이의 의존성이 없으므로 오류를 보다 찾기 쉽습니다.
 
 ### HTTP 통신
-* Alamofire 라이브러리를 활용했습니다.
+* Alamofire 라이브러리를 활용했습니다. (참조: [Alamofire Library](https://github.com/zzung00/Alamofire))
 * [HeyTaxi-Driver Server source](https://github.com/jeyog/heytaxi)
