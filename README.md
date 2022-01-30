@@ -10,4 +10,4 @@
 
 ### HTTP 통신
 * Alamofire 라이브러리를 활용했습니다. (참조: [Alamofire Library](https://github.com/Alamofire/Alamofire))
-* [HeyTaxi-Driver Server source](https://github.com/jeyog/heytaxi)
+* [HeyTaxi-Driver Server source](https://github.com/jeyog/heytaxi)와 통신
