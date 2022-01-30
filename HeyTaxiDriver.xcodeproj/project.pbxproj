@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E209836C27A6657A002A6E91 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209836B27A6657A002A6E91 /* UIColorExtension.swift */; };
+		E209836D27A66D5C002A6E91 /* JalnanOTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = E209836927A66237002A6E91 /* JalnanOTF.otf */; };
 		E20C1F3327A53FD7000DF905 /* HeyTaxiDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F3227A53FD7000DF905 /* HeyTaxiDriverApp.swift */; };
 		E20C1F3527A53FD7000DF905 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F3427A53FD7000DF905 /* ContentView.swift */; };
 		E20C1F3727A53FD8000DF905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20C1F3627A53FD8000DF905 /* Assets.xcassets */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E209836927A66237002A6E91 /* JalnanOTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JalnanOTF.otf; sourceTree = "<group>"; };
+		E209836B27A6657A002A6E91 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		E209836E27A66E08002A6E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E20C1F2F27A53FD7000DF905 /* HeyTaxiDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyTaxiDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20C1F3227A53FD7000DF905 /* HeyTaxiDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyTaxiDriverApp.swift; sourceTree = "<group>"; };
 		E20C1F3427A53FD7000DF905 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +80,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E209836727A661DB002A6E91 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E209836A27A66540002A6E91 /* color */,
+				E209836827A66204002A6E91 /* font */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		E209836827A66204002A6E91 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				E209836927A66237002A6E91 /* JalnanOTF.otf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		E209836A27A66540002A6E91 /* color */ = {
+			isa = PBXGroup;
+			children = (
+				E209836B27A6657A002A6E91 /* UIColorExtension.swift */,
+			);
+			path = color;
+			sourceTree = "<group>";
+		};
 		E20C1F2627A53FD7000DF905 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +128,8 @@
 		E20C1F3127A53FD7000DF905 /* HeyTaxiDriver */ = {
 			isa = PBXGroup;
 			children = (
+				E209836E27A66E08002A6E91 /* Info.plist */,
+				E209836727A661DB002A6E91 /* Support */,
 				E20C1F5C27A540F2000DF905 /* View */,
 				E20C1F3227A53FD7000DF905 /* HeyTaxiDriverApp.swift */,
 				E20C1F3427A53FD7000DF905 /* ContentView.swift */,
@@ -245,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E209836D27A66D5C002A6E91 /* JalnanOTF.otf in Resources */,
 				E20C1F3A27A53FD8000DF905 /* Preview Assets.xcassets in Resources */,
 				E20C1F3727A53FD8000DF905 /* Assets.xcassets in Resources */,
 			);
@@ -273,6 +306,7 @@
 			files = (
 				E20C1F3527A53FD7000DF905 /* ContentView.swift in Sources */,
 				E20C1F6027A5422B000DF905 /* MainView.swift in Sources */,
+				E209836C27A6657A002A6E91 /* UIColorExtension.swift in Sources */,
 				E20C1F3327A53FD7000DF905 /* HeyTaxiDriverApp.swift in Sources */,
 				E20C1F5E27A54107000DF905 /* SplashView.swift in Sources */,
 			);
@@ -438,6 +472,8 @@
 				DEVELOPMENT_TEAM = 426JBC325G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HeyTaxiDriver/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -467,6 +503,8 @@
 				DEVELOPMENT_TEAM = 426JBC325G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HeyTaxiDriver/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
