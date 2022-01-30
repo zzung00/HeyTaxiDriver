@@ -1,0 +1,47 @@
+//
+//  VerifiedView.swift
+//  HeyTaxiDriver
+//
+//  Created by 이정현 on 2022/01/31.
+//
+
+import SwiftUI
+
+struct VerifiedView: View {
+    @State private var tipAmount = ""
+    
+    var body: some View {
+        VStack(alignment: .center, spacing: 30) {
+            Text("인증번호를 입력해주세요")
+                .bold()
+                .foregroundColor(.mainGreen)
+                .font(Font.custom("JalnanOTF", size: 30))
+                .frame(width: 380, height: 50)
+            
+            TextField("인증번호", text: $tipAmount)
+                .frame(width: 200, height: 50)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .keyboardType(.numberPad)
+                .disableAutocorrection(true)
+            
+            Button(action: {}) {
+                Text("인증 확인")
+                    .frame(width: 220, height: 50)
+            }
+            .background(Color.mainGreen)
+            .cornerRadius(10)
+            .foregroundColor(.white)
+            .font(Font.body.bold())
+            .frame(width: 220)
+            
+            Spacer()
+        }
+        .padding(EdgeInsets(top: 50, leading: 0, bottom: 50, trailing: 0))
+    }
+}
+
+struct VerifiedView_Previews: PreviewProvider {
+    static var previews: some View {
+        VerifiedView()
+    }
+}

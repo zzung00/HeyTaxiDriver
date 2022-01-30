@@ -22,9 +22,10 @@
 		E20C1F5027A53FD8000DF905 /* HeyTaxiDriverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F4F27A53FD8000DF905 /* HeyTaxiDriverUITestsLaunchTests.swift */; };
 		E20C1F5E27A54107000DF905 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F5D27A54107000DF905 /* SplashView.swift */; };
 		E20C1F6027A5422B000DF905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F5F27A5422B000DF905 /* MainView.swift */; };
+		E278324827A6E5F10061E6D7 /* VerifiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278324727A6E5F10061E6D7 /* VerifiedView.swift */; };
 		E2ED5D8E27A67A93003CF311 /* TaxiDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED5D8D27A67A93003CF311 /* TaxiDTO.swift */; };
 		E2ED5D9027A67B90003CF311 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED5D8F27A67B90003CF311 /* UserDTO.swift */; };
-		E2ED5D9227A67E64003CF311 /* LoginVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED5D9127A67E64003CF311 /* LoginVIew.swift */; };
+		E2ED5D9227A67E64003CF311 /* VerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED5D9127A67E64003CF311 /* VerifyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,9 +70,10 @@
 		E20C1F4F27A53FD8000DF905 /* HeyTaxiDriverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyTaxiDriverUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E20C1F5D27A54107000DF905 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		E20C1F5F27A5422B000DF905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E278324727A6E5F10061E6D7 /* VerifiedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedView.swift; sourceTree = "<group>"; };
 		E2ED5D8D27A67A93003CF311 /* TaxiDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiDTO.swift; sourceTree = "<group>"; };
 		E2ED5D8F27A67B90003CF311 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
-		E2ED5D9127A67E64003CF311 /* LoginVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVIew.swift; sourceTree = "<group>"; };
+		E2ED5D9127A67E64003CF311 /* VerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyView.swift; sourceTree = "<group>"; };
 		F917EFA3CA0ED7F5EF2080CA /* Pods-HeyTaxiDriverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriverTests.release.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,7 +186,8 @@
 		E20C1F3127A53FD7000DF905 /* HeyTaxiDriver */ = {
 			isa = PBXGroup;
 			children = (
-				E2ED5D8C27A67A58003CF311 /* Dto */,
+				E278324627A6E4740061E6D7 /* ViewModel */,
+				E278324527A6E46A0061E6D7 /* Model */,
 				E209836F27A6742E002A6E91 /* Service */,
 				E209836E27A66E08002A6E91 /* Info.plist */,
 				E209836727A661DB002A6E91 /* Support */,
@@ -227,18 +230,26 @@
 			children = (
 				E20C1F5D27A54107000DF905 /* SplashView.swift */,
 				E20C1F5F27A5422B000DF905 /* MainView.swift */,
-				E2ED5D9127A67E64003CF311 /* LoginVIew.swift */,
+				E2ED5D9127A67E64003CF311 /* VerifyView.swift */,
+				E278324727A6E5F10061E6D7 /* VerifiedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		E2ED5D8C27A67A58003CF311 /* Dto */ = {
+		E278324527A6E46A0061E6D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E2ED5D8D27A67A93003CF311 /* TaxiDTO.swift */,
 				E2ED5D8F27A67B90003CF311 /* UserDTO.swift */,
+				E2ED5D8D27A67A93003CF311 /* TaxiDTO.swift */,
 			);
-			path = Dto;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E278324627A6E4740061E6D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,7 +494,8 @@
 				E209837127A6775B002A6E91 /* HeyTaxiService.swift in Sources */,
 				E2ED5D8E27A67A93003CF311 /* TaxiDTO.swift in Sources */,
 				E20C1F3527A53FD7000DF905 /* ContentView.swift in Sources */,
-				E2ED5D9227A67E64003CF311 /* LoginVIew.swift in Sources */,
+				E2ED5D9227A67E64003CF311 /* VerifyView.swift in Sources */,
+				E278324827A6E5F10061E6D7 /* VerifiedView.swift in Sources */,
 				E20C1F6027A5422B000DF905 /* MainView.swift in Sources */,
 				E209836C27A6657A002A6E91 /* UIColorExtension.swift in Sources */,
 				E20C1F3327A53FD7000DF905 /* HeyTaxiDriverApp.swift in Sources */,

@@ -8,6 +8,6 @@
 import Alamofire
 
 func post() {
-    let apiURL = "http://172.30.1.30"
+    //let apiURL = "http://172.30.1.30"
     
 }

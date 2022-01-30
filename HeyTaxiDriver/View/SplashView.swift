@@ -12,7 +12,7 @@ struct SplashView: View {
     var body: some View {
         VStack {
             if self.isActive {
-                LoginVIew()
+                VerifyView()
             } else {
                 Text("HeyTaxi")
                     .bold()
