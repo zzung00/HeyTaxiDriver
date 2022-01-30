@@ -13,18 +13,17 @@ struct LoginVIew: View {
     @State private var password = ""
     
     var body: some View {
-        VStack(alignment: .center) {
+        VStack(alignment: .center, spacing: 30) {
             Text("전화번호를 입력해주세요")
                 .bold()
                 .foregroundColor(.mainGreen)
                 .font(Font.custom("JalnanOTF", size: 30))
-            Spacer()
+                .frame(width: 380, height: 50)
             
             TextField("전화번호", text: $tipAmount)
-                .padding(.all)
-                .frame(width: 350, height: 60)
+                .frame(width: 350, height: 100)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .keyboardType(.namePhonePad)
+                .keyboardType(.numberPad)
                 .disableAutocorrection(true)
             
             Button(action: {}) {
@@ -36,8 +35,10 @@ struct LoginVIew: View {
             .foregroundColor(.white)
             .font(Font.body.bold())
             .frame(width: 220)
+            
+            Spacer()
         }
-        .padding(EdgeInsets(top: 70, leading: 0, bottom: 0, trailing: 0))
+        .padding(EdgeInsets(top: 50, leading: 0, bottom: 50, trailing: 0))
     }
 }
 
