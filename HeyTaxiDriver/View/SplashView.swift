@@ -12,12 +12,12 @@ struct SplashView: View {
     var body: some View {
         VStack {
             if self.isActive {
-                MainView()
+                LoginVIew()
             } else {
                 Text("HeyTaxi")
                     .bold()
                     .foregroundColor(.mainGreen)
-                    .font(Font.custom("JalnanOTF", size: 40))
+                    .font(Font.custom("JalnanOTF", size: 50))
                 
             }
         }
