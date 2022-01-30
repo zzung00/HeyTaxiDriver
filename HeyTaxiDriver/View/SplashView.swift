@@ -17,7 +17,7 @@ struct SplashView: View {
                 Text("HeyTaxi")
                     .bold()
                     .foregroundColor(.mainGreen)
-                    .font(Font.custom("JalnanOTF", size: 35))
+                    .font(Font.custom("JalnanOTF", size: 40))
                 
             }
         }
