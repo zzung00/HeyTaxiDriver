@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct TaxiDTO {
+struct TaxiModel {
     private let name: String
     private let carNumber: String
-    private let user: UserDTO 
+    private let user: UserModel
 }

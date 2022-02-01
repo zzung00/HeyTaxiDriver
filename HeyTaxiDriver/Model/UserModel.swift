@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserDTO {
+struct UserModel {
     private let name: String
     private let username: String
     
