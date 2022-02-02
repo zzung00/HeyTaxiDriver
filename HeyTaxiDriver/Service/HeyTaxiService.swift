@@ -23,11 +23,12 @@ struct HeyTaxiService {
         "Accept" : "application/json"
     ]
     
-    func serverConnect() -> Bool {
-        var result: Bool = false
-        print("서버 커넥트 호출!!!!!!")
-        let request = AF.request(baseUrl, method: .get, encoding: JSONEncoding.default).response
-        return request?.statusCode == 200
+    func serverConnect(completion: @escaping (Bool) -> Void) {
+        AF.request(baseUrl, method: .get, encoding: JSONEncoding.default).responseJSON { response in
+            DispatchQueue.main.async {
+                completion(response.response?.statusCode == 200)
+            }
+        }
     }
 
     func verifyRequest(phone: String) {

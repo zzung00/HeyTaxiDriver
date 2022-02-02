@@ -12,9 +12,8 @@ class SplashViewModel: ObservableObject {
     @Published var connects: Bool = false
     
     func serverConnect() {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
-            self.connects = HeyTaxiService.shared.serverConnect()
-            print(self.connects)
+        HeyTaxiService.shared.serverConnect { result in
+            self.connects = result
         }
     }
 }
