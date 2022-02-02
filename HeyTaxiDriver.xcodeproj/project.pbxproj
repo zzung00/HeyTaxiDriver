@@ -22,6 +22,7 @@
 		E20C1F5027A53FD8000DF905 /* HeyTaxiDriverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F4F27A53FD8000DF905 /* HeyTaxiDriverUITestsLaunchTests.swift */; };
 		E20C1F5E27A54107000DF905 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F5D27A54107000DF905 /* SplashView.swift */; };
 		E20C1F6027A5422B000DF905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F5F27A5422B000DF905 /* MainView.swift */; };
+		E25605E227AA396700EFC181 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25605E127AA396700EFC181 /* SplashViewModel.swift */; };
 		E278324827A6E5F10061E6D7 /* VerifiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278324727A6E5F10061E6D7 /* VerifiedView.swift */; };
 		E278324C27A6E8A20061E6D7 /* VerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278324B27A6E8A20061E6D7 /* VerifyView.swift */; };
 		E2ED5D8E27A67A93003CF311 /* TaxiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED5D8D27A67A93003CF311 /* TaxiModel.swift */; };
@@ -70,6 +71,7 @@
 		E20C1F4F27A53FD8000DF905 /* HeyTaxiDriverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyTaxiDriverUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E20C1F5D27A54107000DF905 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		E20C1F5F27A5422B000DF905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E25605E127AA396700EFC181 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		E278324727A6E5F10061E6D7 /* VerifiedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedView.swift; sourceTree = "<group>"; };
 		E278324B27A6E8A20061E6D7 /* VerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyView.swift; sourceTree = "<group>"; };
 		E2ED5D8D27A67A93003CF311 /* TaxiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiModel.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		E278324627A6E4740061E6D7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E25605E127AA396700EFC181 /* SplashViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				E20C1F3B27A53FD8000DF905 /* Sources */,
 				E20C1F3C27A53FD8000DF905 /* Frameworks */,
 				E20C1F3D27A53FD8000DF905 /* Resources */,
+				14F2C32D8954ACC5D1AF844C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,6 +388,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		14F2C32D8954ACC5D1AF844C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1556D570734B3AA2A266B1CA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,6 +516,7 @@
 				E2ED5D8E27A67A93003CF311 /* TaxiModel.swift in Sources */,
 				E20C1F3527A53FD7000DF905 /* ContentView.swift in Sources */,
 				E278324827A6E5F10061E6D7 /* VerifiedView.swift in Sources */,
+				E25605E227AA396700EFC181 /* SplashViewModel.swift in Sources */,
 				E20C1F6027A5422B000DF905 /* MainView.swift in Sources */,
 				E209836C27A6657A002A6E91 /* UIColorExtension.swift in Sources */,
 				E20C1F3327A53FD7000DF905 /* HeyTaxiDriverApp.swift in Sources */,
@@ -666,6 +688,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HeyTaxiDriver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -698,6 +721,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HeyTaxiDriver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

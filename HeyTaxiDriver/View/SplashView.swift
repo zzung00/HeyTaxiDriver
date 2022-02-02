@@ -9,9 +9,11 @@ import SwiftUI
 
 struct SplashView: View {
     @State var isActive:Bool = false
+    @StateObject private var viewModel = SplashViewModel()
+    
     var body: some View {
         VStack {
-            if self.isActive {
+            if viewModel.connects {
                 VerifyView()
             } else {
                 Text("HeyTaxi")
@@ -21,13 +23,9 @@ struct SplashView: View {
                 
             }
         }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                withAnimation{
-                    self.isActive = true
-                }
-            }
-        }
+        .onAppear(perform: {
+            viewModel.serverConnect()
+        })
     }
 }
 

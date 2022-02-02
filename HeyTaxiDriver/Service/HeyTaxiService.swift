@@ -15,7 +15,7 @@ struct VerifyResponse: Codable {
 }
 
 struct HeyTaxiService {
-    private let baseUrl = "http://220.124.113.180"
+    private let baseUrl = "http://172.30.1.30"
     static let shared = HeyTaxiService()
     
     let header: HTTPHeaders = [
@@ -23,6 +23,13 @@ struct HeyTaxiService {
         "Accept" : "application/json"
     ]
     
+    func serverConnect() -> Bool {
+        var result: Bool = false
+        print("서버 커넥트 호출!!!!!!")
+        let request = AF.request(baseUrl, method: .get, encoding: JSONEncoding.default).response
+        return request?.statusCode == 200
+    }
+
     func verifyRequest(phone: String) {
         let url: String = baseUrl + "/api/verify/request"
         let body: Parameters = [
