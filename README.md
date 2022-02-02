@@ -22,3 +22,12 @@
 ----------------------------------
 * Alamofire 라이브러리를 활용했습니다. (참조: [Alamofire Library](https://github.com/Alamofire/Alamofire))
 * [HeyTaxi-Driver Server](https://github.com/jeyog/heytaxi)와 통신
+
+### ✏️ 라이브러리 설치
+* 순서 (project내에서 처리)
+1. pod init
+2. open Podfile
+3. pod 'Alamofire', 'RxSwift', 'RxCocoa' 추가
+4. pod install
+
+‼️ Mac M1 칩셋일 경우, 터미널을 Rosetta를 이용하여 열어 ffi 설치 후 pod install 진행해주세요.
