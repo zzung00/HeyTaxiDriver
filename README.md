@@ -16,7 +16,7 @@
 * 각각의 부분이 독립적이기 때문에 모듈화하여 개발 가능합니다.
 * View와 Model 사이의 의존성이 없고 View와 ViewModel 사이의 의존성이 없으므로 오류를 보다 찾기 쉽습니다.
 
-![mvvm](https://user-images.githubusercontent.com/90949515/151707888-399e5e83-4fcd-4f95-b228-d4fc648d9143.png)
+<img width="456" alt="스크린샷 2022-02-02 오후 2 24 26" src="https://user-images.githubusercontent.com/90949515/152097736-8deb9eb2-0419-4682-8866-8ffe74dc382a.png">
 
 ### ✏️ HTTP 통신
 ----------------------------------
