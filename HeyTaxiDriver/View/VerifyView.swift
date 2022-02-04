@@ -25,6 +25,10 @@ struct VerifyView: View {
                 .keyboardType(.numberPad)
                 .disableAutocorrection(true)
             
+            if viewModel.success {
+                
+            }
+            
             Button(action: {
                 viewModel.verifyRequest(phone: phoneNumber)
             }) {
