@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SplashView: View {
-    @State var isActive:Bool = false
     @StateObject private var viewModel = SplashViewModel()
     
     var body: some View {
@@ -20,12 +19,17 @@ struct SplashView: View {
                     .bold()
                     .foregroundColor(.mainGreen)
                     .font(Font.custom("JalnanOTF", size: 50))
-                
             }
         }
         .onAppear(perform: {
-            viewModel.serverConnect()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                viewModel.serverConnect()
+            }
         })
+        
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text("HeyTaxi"), message: Text("서버에 연결 할 수 없습니다"), dismissButton: .default(Text("확인")))
+        }
     }
 }
 

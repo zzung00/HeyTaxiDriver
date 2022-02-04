@@ -15,7 +15,7 @@ struct VerifyResponse: Codable {
 }
 
 struct HeyTaxiService {
-    private let baseUrl = "http://172.30.1.30"
+    private let baseUrl = "http://222.105.87.203"
     static let shared = HeyTaxiService()
     
     let header: HTTPHeaders = [
@@ -31,10 +31,16 @@ struct HeyTaxiService {
         }
     }
 
-    func verifyRequest(phone: String) {
+    func verifyRequest(phone: String, completion: @escaping (VerifyResponse) -> Void) {
         let url: String = baseUrl + "/api/verify/request"
         let body: Parameters = [
             "phone": phone
         ]
+        AF.request(url, method: .post, encoding: JSONEncoding.default).responseJSON {
+            response in
+            DispatchQueue.main.async {
+                print(response.data)
+            }
+        }
     }
 }
