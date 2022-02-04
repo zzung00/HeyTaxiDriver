@@ -8,6 +8,7 @@
 import Alamofire
 import Combine
 import Foundation
+import SwiftUI
 
 struct VerifyResponse: Codable {
     let success: Bool
@@ -36,10 +37,20 @@ struct HeyTaxiService {
         let body: Parameters = [
             "phone": phone
         ]
-        AF.request(url, method: .post, encoding: JSONEncoding.default).responseJSON {
+        AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default).responseJSON {
             response in
-            DispatchQueue.main.async {
-                print(response.data)
+            switch response.result {
+            case.success(let value):
+                do {
+                    let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
+                    let decoder = JSONDecoder()
+                    let verifyResponse = try decoder.decode(VerifyResponse.self, from: data)
+                    print(verifyResponse)
+                } catch {
+                    
+                }
+            default:
+                return
             }
         }
     }
