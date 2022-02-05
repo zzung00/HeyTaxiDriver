@@ -12,9 +12,7 @@ struct VerifyView: View {
     @StateObject private var viewModel = VerifyViewModel()
     
     var body: some View {
-        if viewModel.success {
-            VerifiedView()
-        } else {
+        NavigationView {
             VStack(alignment: .center, spacing: 30) {
                 Text("전화번호를 입력해주세요")
                     .bold()
@@ -28,11 +26,16 @@ struct VerifyView: View {
                     .keyboardType(.numberPad)
                     .disableAutocorrection(true)
                 
-                Button(action: {
-                    viewModel.verifyRequest(phone: phoneNumber)
-                }) {
-                    Text("인증 요청")
-                        .frame(width: 220, height: 50)
+                NavigationLink(destination: VerifiedView(), isActive: $viewModel.success) {
+                
+                    Button(action: {
+                        viewModel.verifyRequest(phone: phoneNumber)
+                    }) {
+                    
+                        Text("인증 요청")
+                            .frame(width: 220, height: 50)
+                    }
+                        
                 }
                 .background(Color.mainGreen)
                 .cornerRadius(10)
