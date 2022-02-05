@@ -9,18 +9,40 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .center, spacing: 30) {
             Button(action: {}) {
-                Text("대기")
+                Text("콜 수락")
+                    .frame(width: 220, height: 50)
             }
+            .background(Color.mainGreen)
+            .cornerRadius(10)
+            .foregroundColor(.white)
+            .font(Font.body.bold())
+            .frame(width: 220)
+            
+            //Spacer()
             
             Button(action: {}) {
-                Text("승차")
+                Text("빈차")
+                    .frame(width: 220, height: 50)
             }
+            .background(Color.allowCalling)
+            .cornerRadius(10)
+            .foregroundColor(.white)
+            .font(Font.body.bold())
+            .frame(width: 220)
+            
+            //Spacer()
             
             Button(action: {}) {
-                Text("하차")
+                Text("예약")
+                    .frame(width: 220, height: 50)
             }
+            .background(Color.reserveCalling)
+            .cornerRadius(10)
+            .foregroundColor(.white)
+            .font(Font.body.bold())
+            .frame(width: 220)
         }
     }
 }

@@ -24,5 +24,7 @@ extension Color {
 
 extension Color {
     static let mainGreen = Color(hex: "#64D899")
+    static let allowCalling = Color(hex: "FF3333")
+    static let reserveCalling = Color(hex: "0066FF")
 }
 
