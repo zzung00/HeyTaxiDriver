@@ -13,6 +13,7 @@ import SwiftUI
 struct VerifyResponse: Codable {
     let success: Bool
     let message: String
+    let token: String?
 }
 
 struct HeyTaxiService {
@@ -47,6 +48,31 @@ struct HeyTaxiService {
                     let verifyResponse = try decoder.decode(VerifyResponse.self, from: data)
                     completion(verifyResponse)
                 } catch {
+                    
+                }
+            default:
+                return
+            }
+        }
+    }
+    
+    func verify(phone: String, clientSecret: String, code: String, completion: @escaping (VerifyResponse) -> Void) {
+        let url: String = baseUrl + "/api/verify/verify"
+        let body: Parameters = [
+            "phone": phone,
+            "clientSecret": clientSecret,
+            "code": code
+        ]
+        AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default).responseJSON {
+            response in
+            switch response.result {
+            case.success(let value):
+                do {
+                    let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
+                    let decoder = JSONDecoder()
+                    let verifyResponse = try decoder.decode(VerifyResponse.self, from: data)
+                    completion(verifyResponse)
+                }catch {
                     
                 }
             default:
