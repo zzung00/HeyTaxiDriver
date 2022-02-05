@@ -16,7 +16,7 @@ struct VerifyResponse: Codable {
 }
 
 struct HeyTaxiService {
-    private let baseUrl = "http://222.105.87.203"
+    private let baseUrl = "http://172.30.1.56"
     static let shared = HeyTaxiService()
     
     let header: HTTPHeaders = [
@@ -45,7 +45,7 @@ struct HeyTaxiService {
                     let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
                     let decoder = JSONDecoder()
                     let verifyResponse = try decoder.decode(VerifyResponse.self, from: data)
-                    print(verifyResponse)
+                    completion(verifyResponse)
                 } catch {
                     
                 }
