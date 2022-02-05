@@ -30,11 +30,14 @@ struct VerifiedView: View {
                 .keyboardType(.numberPad)
                 .disableAutocorrection(true)
             
-            Button(action: {
-                viewModel.verify(phone: phoneNumber, clientSecret: "", code: code)
-            }) {
-                Text("인증 확인")
-                    .frame(width: 220, height: 50)
+            NavigationLink(destination: MainView(), isActive: $viewModel.success) {
+            
+                Button(action: {
+                    viewModel.verify(phone: phoneNumber, clientSecret: "", code: code)
+                }) {
+                    Text("인증 확인")
+                        .frame(width: 220, height: 50)
+                }
             }
             .background(Color.mainGreen)
             .cornerRadius(10)

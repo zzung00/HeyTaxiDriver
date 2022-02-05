@@ -9,7 +9,19 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text("여기는 메인뷰!")
+        VStack {
+            Button(action: {}) {
+                Text("대기")
+            }
+            
+            Button(action: {}) {
+                Text("승차")
+            }
+            
+            Button(action: {}) {
+                Text("하차")
+            }
+        }
     }
 }
 

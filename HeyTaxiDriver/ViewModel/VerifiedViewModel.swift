@@ -18,7 +18,6 @@ class VerifiedViewModel: ObservableObject {
             self.success = result.success
             self.message = result.message
             self.token = result.token
-            print(result)
         }
     }
 }
