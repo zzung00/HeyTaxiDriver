@@ -23,6 +23,7 @@
 		E20C1F5E27A54107000DF905 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F5D27A54107000DF905 /* SplashView.swift */; };
 		E20C1F6027A5422B000DF905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C1F5F27A5422B000DF905 /* MainView.swift */; };
 		E25605E227AA396700EFC181 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25605E127AA396700EFC181 /* SplashViewModel.swift */; };
+		E260A3EE27AE5AE10043CD53 /* VerifiedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A3ED27AE5AE10043CD53 /* VerifiedViewModel.swift */; };
 		E278324827A6E5F10061E6D7 /* VerifiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278324727A6E5F10061E6D7 /* VerifiedView.swift */; };
 		E278324C27A6E8A20061E6D7 /* VerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278324B27A6E8A20061E6D7 /* VerifyView.swift */; };
 		E29D9FF827AD5AC40078392B /* VerifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D9FF727AD5AC40078392B /* VerifyViewModel.swift */; };
@@ -73,6 +74,7 @@
 		E20C1F5D27A54107000DF905 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		E20C1F5F27A5422B000DF905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E25605E127AA396700EFC181 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		E260A3ED27AE5AE10043CD53 /* VerifiedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedViewModel.swift; sourceTree = "<group>"; };
 		E278324727A6E5F10061E6D7 /* VerifiedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedView.swift; sourceTree = "<group>"; };
 		E278324B27A6E8A20061E6D7 /* VerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyView.swift; sourceTree = "<group>"; };
 		E29D9FF727AD5AC40078392B /* VerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewModel.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			children = (
 				E25605E127AA396700EFC181 /* SplashViewModel.swift */,
 				E29D9FF727AD5AC40078392B /* VerifyViewModel.swift */,
+				E260A3ED27AE5AE10043CD53 /* VerifiedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 			files = (
 				E209837127A6775B002A6E91 /* HeyTaxiService.swift in Sources */,
 				E29D9FF827AD5AC40078392B /* VerifyViewModel.swift in Sources */,
+				E260A3EE27AE5AE10043CD53 /* VerifiedViewModel.swift in Sources */,
 				E2ED5D8E27A67A93003CF311 /* TaxiModel.swift in Sources */,
 				E20C1F3527A53FD7000DF905 /* ContentView.swift in Sources */,
 				E278324827A6E5F10061E6D7 /* VerifiedView.swift in Sources */,

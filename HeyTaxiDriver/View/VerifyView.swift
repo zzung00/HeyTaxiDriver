@@ -26,7 +26,7 @@ struct VerifyView: View {
                     .keyboardType(.numberPad)
                     .disableAutocorrection(true)
                 
-                NavigationLink(destination: VerifiedView(), isActive: $viewModel.success) {
+                NavigationLink(destination: VerifiedView(phoneNumber: phoneNumber), isActive: $viewModel.success) {
                 
                     Button(action: {
                         viewModel.verifyRequest(phone: phoneNumber)

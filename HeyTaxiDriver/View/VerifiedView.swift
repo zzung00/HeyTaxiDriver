@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct VerifiedView: View {
-    @State private var tipAmount = ""
+    private let phoneNumber: String
+    @State private var code = ""
+    @StateObject private var viewModel = VerifiedViewModel()
+    
+    init(phoneNumber: String) {
+        self.phoneNumber = phoneNumber
+    }
     
     var body: some View {
         VStack(alignment: .center, spacing: 30) {
@@ -18,13 +24,15 @@ struct VerifiedView: View {
                 .font(Font.custom("JalnanOTF", size: 30))
                 .frame(width: 380, height: 50)
             
-            TextField("인증번호", text: $tipAmount)
+            TextField("인증번호", text: $code)
                 .frame(width: 200, height: 50)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.numberPad)
                 .disableAutocorrection(true)
             
-            Button(action: {}) {
+            Button(action: {
+                viewModel.verify(phone: phoneNumber, clientSecret: "", code: code)
+            }) {
                 Text("인증 확인")
                     .frame(width: 220, height: 50)
             }
@@ -42,6 +50,6 @@ struct VerifiedView: View {
 
 struct VerifiedView_Previews: PreviewProvider {
     static var previews: some View {
-        VerifiedView()
+        VerifiedView(phoneNumber: "")
     }
 }
