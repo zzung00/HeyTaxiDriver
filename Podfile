@@ -9,6 +9,7 @@ target 'HeyTaxiDriver' do
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'StompClientLib'
 
   target 'HeyTaxiDriverTests' do
     inherit! :search_paths
