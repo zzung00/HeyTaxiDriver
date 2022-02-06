@@ -31,3 +31,15 @@
 4. pod install
 
 ‼️ Mac M1 칩셋일 경우, 터미널을 Rosetta를 이용하여 열어 ffi 설치 후 pod install 진행해주세요.
+
+### ✏️ WebSocket 통신
+-----------------------------------
+* StompClientLib를 활용했습니다.
+* 택시의 실시간 위치를 서버에 보내기 위해 사용했습니다.
+
+### ✏️ 라이브러리 설치
+* 순서 (project내에서 처리)
+1. open Podfile
+2. pod 'StompClientLib' 추가
+3. pod install
+
