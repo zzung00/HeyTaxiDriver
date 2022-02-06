@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject private var viewModel = MainViewModel()
+    
     var body: some View {
         VStack(alignment: .center, spacing: 30) {
             Button(action: {}) {
@@ -49,6 +51,9 @@ struct MainView: View {
             .foregroundColor(.white)
             .font(Font.body.bold())
             .frame(width: 220)
+        }
+        .onAppear {
+            viewModel.loadMe()
         }
     }
 }

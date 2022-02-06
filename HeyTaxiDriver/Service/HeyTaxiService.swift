@@ -9,6 +9,7 @@ import Alamofire
 import Combine
 import Foundation
 import SwiftUI
+import RxSwift
 
 struct VerifyResponse: Codable {
     let success: Bool
@@ -16,9 +17,16 @@ struct VerifyResponse: Codable {
     let token: String?
 }
 
-struct HeyTaxiService {
+struct UserResponse: Codable {
+    let success: Bool
+    let message: String
+    let user: UserModel
+}
+
+class HeyTaxiService {
     private let baseUrl = "http://172.30.1.56"
     static let shared = HeyTaxiService()
+    var token: String?
     
     let header: HTTPHeaders = [
         "Content-Type" : "application/json",
@@ -71,7 +79,32 @@ struct HeyTaxiService {
                     let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
                     let decoder = JSONDecoder()
                     let verifyResponse = try decoder.decode(VerifyResponse.self, from: data)
+                    self.token = verifyResponse.token
                     completion(verifyResponse)
+                }catch {
+                    
+                }
+            default:
+                return
+            }
+        }
+    }
+    
+    func loadMe(completion: @escaping (UserResponse) -> Void) {
+        let url: String = baseUrl + "/api/user"
+        var header = self.header
+        if(token != nil) {
+            header.add(name: "Authorization", value: "Bearer \(self.token!)")
+        }
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON {
+            response in
+            switch response.result {
+            case.success(let value):
+                do {
+                    let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
+                    let decoder = JSONDecoder()
+                    let userResponse = try decoder.decode(UserResponse.self, from: data)
+                    completion(userResponse)
                 }catch {
                     
                 }
