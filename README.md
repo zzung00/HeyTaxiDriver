@@ -47,4 +47,5 @@
 ------------------------------------
 * Keychain 이란?
   - Mac OS와 iOS에서 사용, 사용자의 수고를 덜어주기 위해 대신 데이터를 안전하게 저장하는 저장소.
+<img width="780" alt="스크린샷 2022-02-08 오후 11 09 23" src="https://user-images.githubusercontent.com/90949515/153005159-884f2da0-6df0-4af4-b8ee-87c9d85bc5d3.png">
 
