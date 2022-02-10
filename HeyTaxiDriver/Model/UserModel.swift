@@ -8,8 +8,8 @@
 import Foundation
 
 struct UserModel: Codable {
-    private let name: String
-    private let username: String
+    let name: String?
+    let username: String?
     
     init(name: String, username: String) {
         self.name = name

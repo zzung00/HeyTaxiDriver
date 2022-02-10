@@ -23,6 +23,12 @@ struct UserResponse: Codable {
     let user: UserModel
 }
 
+struct TaxiResponse: Codable {
+    let success: Bool
+    let message: String
+    let taxi: TaxiModel
+}
+
 class HeyTaxiService {
     private let baseUrl = "http://172.30.1.22"
     static let shared = HeyTaxiService()
@@ -106,6 +112,37 @@ class HeyTaxiService {
                     let decoder = JSONDecoder()
                     let userResponse = try decoder.decode(UserResponse.self, from: data)
                     completion(userResponse)
+                }catch {
+                    
+                }
+            default:
+                return
+            }
+        }
+    }
+    
+    func registerTaxi(name: String, carNumber: String, completion: @escaping (TaxiResponse) -> Void) {
+        let url: String = baseUrl + "/api/taxi"
+        var header = self.header
+        let token = TokenUtils.getToken(serviceID: baseUrl)
+        if (token != nil) {
+            header.add(name: "Authorization", value: token!)
+        }
+        
+        let body: Parameters = [
+            "name": name,
+            "carNumber": carNumber
+        ]
+        
+        AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON {
+            response in
+            switch response.result {
+            case.success(let value):
+                do {
+                    let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
+                    let decoder = JSONDecoder()
+                    let taxiResponse = try decoder.decode(TaxiResponse.self, from: data)
+                    completion(taxiResponse)
                 }catch {
                     
                 }
