@@ -71,8 +71,8 @@ class TokenUtils {
     static func getToken(serviceID: String) -> String? {
         let serviceID = serviceID
         
-        if let accessToken = self.read(serviceID, account: "accessToken") {
-            return "bearer \(accessToken)"
+        if let token = self.read(serviceID, account: "token") {
+            return "bearer \(token)"
         } else {
             return nil
         }

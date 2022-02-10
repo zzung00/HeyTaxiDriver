@@ -24,9 +24,8 @@ struct UserResponse: Codable {
 }
 
 class HeyTaxiService {
-    private let baseUrl = "http://172.30.1.56"
+    private let baseUrl = "http://172.30.1.22"
     static let shared = HeyTaxiService()
-    var token: String?
     
     let header: HTTPHeaders = [
         "Content-Type" : "application/json",
@@ -79,7 +78,6 @@ class HeyTaxiService {
                     let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
                     let decoder = JSONDecoder()
                     let verifyResponse = try decoder.decode(VerifyResponse.self, from: data)
-                    self.token = verifyResponse.token
                     completion(verifyResponse)
                 }catch {
                     
@@ -93,9 +91,12 @@ class HeyTaxiService {
     func loadMe(completion: @escaping (UserResponse) -> Void) {
         let url: String = baseUrl + "/api/user"
         var header = self.header
-        if(token != nil) {
-            header.add(name: "Authorization", value: "Bearer \(self.token!)")
+        let token = TokenUtils.getToken(serviceID: baseUrl)
+        
+        if (token != nil) {
+            header.add(name: "Authorization", value: token!)
         }
+        
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON {
             response in
             switch response.result {
