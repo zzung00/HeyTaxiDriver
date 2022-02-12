@@ -8,10 +8,10 @@
 import Foundation
 
 struct TaxiModel: Codable {
-    private let name: String
-    private let carNumber: String
-    private let user: UserModel
-    private let id: Int
+    let name: String
+    let carNumber: String
+    let user: UserModel
+    let id: Int
     
     init(id: Int, user: UserModel, name: String, carNumber: String) {
         self.id = id
