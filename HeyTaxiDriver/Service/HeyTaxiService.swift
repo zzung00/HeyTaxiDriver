@@ -122,7 +122,7 @@ class HeyTaxiService {
     }
     
     func loadTaxi(completion: @escaping (TaxiResponse) -> Void) {
-        let url:String = baseUrl + "api/taxi"
+        let url:String = baseUrl + "/api/taxi"
         var header = self.header
         let token = TokenUtils.getToken(serviceID: baseUrl)
         

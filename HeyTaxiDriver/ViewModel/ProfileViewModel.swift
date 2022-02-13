@@ -20,4 +20,13 @@ class ProfileViewModel: ObservableObject {
             self.taxi = result.taxi
         }
     }
+    
+    func loadTaxi() {
+        HeyTaxiService.shared.loadTaxi {
+            result in
+            if(result.success) {
+                self.taxi = result.taxi
+            }
+        }
+    }
 }

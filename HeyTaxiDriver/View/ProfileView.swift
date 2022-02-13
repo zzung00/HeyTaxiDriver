@@ -8,15 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
-    private var taxi: TaxiModel?
-    private var user: UserModel?
+    @State private var carName = ""
     @State private var carNumber = ""
     @StateObject private var viewModel = ProfileViewModel()
-    
-    init(taxi: TaxiModel, user: UserModel) {
-        self.taxi = taxi
-        self.user = user
-    }
     
     var body: some View {
         NavigationView {
@@ -53,21 +47,19 @@ struct ProfileView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        viewModel.registerTaxi(name: taxi!.name, carNumber: carNumber)
+                        viewModel.registerTaxi(name: carName, carNumber: carNumber)
                     }) {
                         Text("저장")
                             .bold()
                     }
                 }
             }
-        }
+        }.navigationBarHidden(true)
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        var user = UserModel(name: "홍길동", username: "1234")
-        var taxi = TaxiModel(id: 1, user: user, name: "아우디", carNumber: "12고 3456")
-        ProfileView(taxi: taxi, user: user)
+        ProfileView()
     }
 }

@@ -55,11 +55,11 @@ struct MainView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: ProfileView(taxi: viewModel., user: )) {
-                        Button(action: {}) {
+                    NavigationLink(destination: ProfileView()) {
                             Image(systemName: "person")
-                        }
+                            
                     }
+                    
                 }
             }
             .onAppear {
