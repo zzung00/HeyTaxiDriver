@@ -11,13 +11,23 @@ import StompClientLib
 class MainViewModel: ObservableObject, StompClientLibDelegate {
     private let url = NSURL(string: "ws://172.30.1.49/heytaxi-ws/websocket")
     @Published private var socketClient = StompClientLib()
-    @Published private var user: UserModel?
+    @Published var user: UserModel?
+    @Published var taxi: TaxiModel?
     
     func loadMe() {
         HeyTaxiService.shared.loadMe {
             result in
             if(result.success) {
                 self.user = result.user
+            }
+        }
+    }
+    
+    func loadTaxi() {
+        HeyTaxiService.shared.loadTaxi {
+            result in
+            if(result.success) {
+                self.taxi = result.taxi
             }
         }
     }

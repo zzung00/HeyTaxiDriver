@@ -53,6 +53,15 @@ struct MainView: View {
                 .font(Font.body.bold())
                 .frame(width: 220)
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: ProfileView(taxi: viewModel., user: )) {
+                        Button(action: {}) {
+                            Image(systemName: "person")
+                        }
+                    }
+                }
+            }
             .onAppear {
                 viewModel.loadMe()
             }

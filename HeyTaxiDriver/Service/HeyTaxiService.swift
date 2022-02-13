@@ -121,6 +121,33 @@ class HeyTaxiService {
         }
     }
     
+    func loadTaxi(completion: @escaping (TaxiResponse) -> Void) {
+        let url:String = baseUrl + "api/taxi"
+        var header = self.header
+        let token = TokenUtils.getToken(serviceID: baseUrl)
+        
+        if (token != nil) {
+            header.add(name: "Authorization", value: token!)
+        }
+        
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON {
+            response in
+            switch response.result {
+            case.success(let value):
+                do {
+                    let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
+                    let decoder = JSONDecoder()
+                    let taxiResponse = try decoder.decode(TaxiResponse.self, from: data)
+                    completion(taxiResponse)
+                }catch {
+                    
+                }
+            default:
+                return
+            }
+        }
+    }
+    
     func registerTaxi(name: String, carNumber: String, completion: @escaping (TaxiResponse) -> Void) {
         let url: String = baseUrl + "/api/taxi"
         var header = self.header
