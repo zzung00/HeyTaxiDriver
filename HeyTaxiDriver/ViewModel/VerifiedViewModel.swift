@@ -19,7 +19,7 @@ class VerifiedViewModel: ObservableObject {
             self.message = result.message
             self.token = result.token
             
-            TokenUtils.create("http://172.30.1.22", account: "token", value: self.token!)
+            TokenUtils.create("http://172.30.1.49", account: "token", value: self.token!)
         }
     }
 }

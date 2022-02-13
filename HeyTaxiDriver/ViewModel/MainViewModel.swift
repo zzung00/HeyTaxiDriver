@@ -9,7 +9,7 @@ import Foundation
 import StompClientLib
 
 class MainViewModel: ObservableObject, StompClientLibDelegate {
-    private let url = NSURL(string: "ws://172.30.1.22/heytaxi-ws/websocket")
+    private let url = NSURL(string: "ws://172.30.1.49/heytaxi-ws/websocket")
     @Published private var socketClient = StompClientLib()
     @Published private var user: UserModel?
     
@@ -24,7 +24,7 @@ class MainViewModel: ObservableObject, StompClientLibDelegate {
     
     //socket connection
     func registerSocket() {
-        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url as! URL), delegate: self as! StompClientLibDelegate, connectionHeaders: ["Authorization": TokenUtils.getToken(serviceID: "http://172.30.1.22")!])
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url as! URL), delegate: self as! StompClientLibDelegate, connectionHeaders: ["Authorization": TokenUtils.getToken(serviceID: "http://172.30.1.49")!])
     }
     
     func subscribe() {

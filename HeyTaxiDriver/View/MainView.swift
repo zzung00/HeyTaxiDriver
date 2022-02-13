@@ -11,50 +11,52 @@ struct MainView: View {
     @StateObject private var viewModel = MainViewModel()
     
     var body: some View {
-        VStack(alignment: .center, spacing: 30) {
-            Button(action: {}) {
-                Text("빈 차")
-                    .frame(width: 220, height: 50)
+        NavigationView {
+            VStack(alignment: .center, spacing: 30) {
+                Button(action: {}) {
+                    Text("빈 차")
+                        .frame(width: 220, height: 50)
+                }
+                .background(Color.empty)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                .font(Font.body.bold())
+                .frame(width: 220)
+                
+                Button(action: {}) {
+                    Text("승차")
+                        .frame(width: 220, height: 50)
+                }
+                .background(Color.mainGreen)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                .font(Font.body.bold())
+                .frame(width: 220)
+                
+                Button(action: {}) {
+                    Text("출근")
+                        .frame(width: 220, height: 50)
+                }
+                .background(Color.on)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                .font(Font.body.bold())
+                .frame(width: 220)
+                
+                Button(action: {}) {
+                    Text("퇴근")
+                        .frame(width: 220, height: 50)
+                }
+                .background(Color.off)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                .font(Font.body.bold())
+                .frame(width: 220)
             }
-            .background(Color.empty)
-            .cornerRadius(10)
-            .foregroundColor(.white)
-            .font(Font.body.bold())
-            .frame(width: 220)
-            
-            Button(action: {}) {
-                Text("승차")
-                    .frame(width: 220, height: 50)
+            .onAppear {
+                viewModel.loadMe()
             }
-            .background(Color.mainGreen)
-            .cornerRadius(10)
-            .foregroundColor(.white)
-            .font(Font.body.bold())
-            .frame(width: 220)
-            
-            Button(action: {}) {
-                Text("출근")
-                    .frame(width: 220, height: 50)
-            }
-            .background(Color.on)
-            .cornerRadius(10)
-            .foregroundColor(.white)
-            .font(Font.body.bold())
-            .frame(width: 220)
-            
-            Button(action: {}) {
-                Text("퇴근")
-                    .frame(width: 220, height: 50)
-            }
-            .background(Color.off)
-            .cornerRadius(10)
-            .foregroundColor(.white)
-            .font(Font.body.bold())
-            .frame(width: 220)
-        }
-        .onAppear {
-            viewModel.loadMe()
-        }
+        }.navigationBarHidden(true)
     }
 }
 
@@ -70,4 +72,3 @@ struct MainView_Previews: PreviewProvider {
 // 출퇴근 버튼 동작으로 서버에 위치 보내기 및 멈추기
 // 승객 승차 중, 콜 요청 불가능
 
-// 빈 차, 승차, 출근, 퇴근
