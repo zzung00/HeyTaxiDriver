@@ -23,8 +23,10 @@ class ProfileViewModel: ObservableObject {
     }
     
     func loadTaxi() {
+        print("loadtaxi!!!")
         HeyTaxiService.shared.loadTaxi {
             result in
+            print(result)
             if(result.success) {
                 self.taxi = result.taxi
             }

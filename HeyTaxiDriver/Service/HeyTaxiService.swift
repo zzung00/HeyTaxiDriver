@@ -108,7 +108,6 @@ class HeyTaxiService {
             switch response.result {
             case.success(let value):
                 do {
-                    print(value)
                     let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
                     let decoder = JSONDecoder()
                     let userResponse = try decoder.decode(UserResponse.self, from: data)
@@ -141,7 +140,7 @@ class HeyTaxiService {
                     let taxiResponse = try decoder.decode(TaxiResponse.self, from: data)
                     completion(taxiResponse)
                 }catch {
-                    
+                    print(error)
                 }
             default:
                 return

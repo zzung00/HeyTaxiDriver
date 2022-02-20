@@ -47,6 +47,10 @@ struct ProfileView: View {
                 
                 Spacer()
             }
+            .onAppear {
+                viewModel.loadTaxi()
+            }
+            
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {self.presentationMode.wrappedValue.dismiss()}) {
