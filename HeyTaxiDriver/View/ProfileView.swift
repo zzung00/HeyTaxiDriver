@@ -48,7 +48,11 @@ struct ProfileView: View {
                 Spacer()
             }
             .onAppear {
-                viewModel.loadTaxi()
+                viewModel.loadTaxi {
+                    taxi in
+                    carNumber = taxi.carNumber
+                    carName = taxi.name
+                }
             }
             
             .toolbar {

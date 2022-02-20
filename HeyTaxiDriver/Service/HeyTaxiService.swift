@@ -132,19 +132,21 @@ class HeyTaxiService {
         
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON {
             response in
-            switch response.result {
-            case.success(let value):
-                do {
-                    let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
-                    let decoder = JSONDecoder()
-                    let taxiResponse = try decoder.decode(TaxiResponse.self, from: data)
-                    completion(taxiResponse)
-                }catch {
-                    print(error)
+                switch response.result {
+                case.success(let value):
+                    do {
+                        let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
+                        let decoder = JSONDecoder()
+                        let taxiResponse = try decoder.decode(TaxiResponse.self, from: data)
+                        completion(taxiResponse)
+                    }catch {
+                        
+                    }
+                default:
+                    return
                 }
-            default:
-                return
-            }
+
+            
         }
     }
     

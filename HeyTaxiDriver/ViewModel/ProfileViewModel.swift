@@ -15,20 +15,18 @@ class ProfileViewModel: ObservableObject {
     func registerTaxi(name: String, carNumber: String) {
         HeyTaxiService.shared.registerTaxi(name: name, carNumber: carNumber) {
             result in
-            print(result)
             self.success = result.success
             self.message = result.message
             self.taxi = result.taxi
         }
     }
     
-    func loadTaxi() {
-        print("loadtaxi!!!")
+    func loadTaxi(completion: @escaping (TaxiModel) -> Void) {
         HeyTaxiService.shared.loadTaxi {
             result in
-            print(result)
             if(result.success) {
                 self.taxi = result.taxi
+                completion(result.taxi)
             }
         }
     }
