@@ -72,7 +72,7 @@ class TokenUtils {
         let serviceID = serviceID
         
         if let token = self.read(serviceID, account: "token") {
-            return "bearer \(token)"
+            return "Bearer \(token)"
         } else {
             return nil
         }

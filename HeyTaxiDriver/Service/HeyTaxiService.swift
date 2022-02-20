@@ -103,11 +103,12 @@ class HeyTaxiService {
             header.add(name: "Authorization", value: token!)
         }
         
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON {
+        AF.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseJSON {
             response in
             switch response.result {
             case.success(let value):
                 do {
+                    print(value)
                     let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
                     let decoder = JSONDecoder()
                     let userResponse = try decoder.decode(UserResponse.self, from: data)

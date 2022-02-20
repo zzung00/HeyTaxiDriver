@@ -15,6 +15,7 @@ class ProfileViewModel: ObservableObject {
     func registerTaxi(name: String, carNumber: String) {
         HeyTaxiService.shared.registerTaxi(name: name, carNumber: carNumber) {
             result in
+            print(result)
             self.success = result.success
             self.message = result.message
             self.taxi = result.taxi
