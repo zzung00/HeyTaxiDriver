@@ -9,7 +9,7 @@ import Foundation
 import StompClientLib
 
 class MainViewModel: ObservableObject, StompClientLibDelegate {
-    private let url = NSURL(string: "ws://172.30.1.49/heytaxi-ws/websocket")
+    private let url = NSURL(string: "ws://172.30.1.36/heytaxi-ws/websocket")
     @Published private var socketClient = StompClientLib()
     @Published var user: UserModel?
     @Published var taxi: TaxiModel?

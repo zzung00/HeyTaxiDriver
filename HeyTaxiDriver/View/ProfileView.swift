@@ -11,6 +11,7 @@ struct ProfileView: View {
     @State private var carName = ""
     @State private var carNumber = ""
     @StateObject private var viewModel = ProfileViewModel()
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -38,7 +39,7 @@ struct ProfileView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {}) {
+                    Button(action: {self.presentationMode.wrappedValue.dismiss()}) {
                         Text("취소")
                             .bold()
                             .foregroundColor(.red)
