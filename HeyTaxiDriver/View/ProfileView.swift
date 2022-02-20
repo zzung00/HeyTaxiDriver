@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State private var name = ""
     @State private var carName = ""
     @State private var carNumber = ""
     @StateObject private var viewModel = ProfileViewModel()
@@ -15,7 +16,7 @@ struct ProfileView: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .center, spacing: 30) {                
+            VStack(alignment: .center, spacing: 20) {
                 Image("taxi")
                     .resizable()
                     .renderingMode(.template)
@@ -31,11 +32,27 @@ struct ProfileView: View {
                     )
                     .shadow(radius: 10)
                 
+                Spacer()
+                
+                TextField("이름", text: $name)
+                    .frame(width: 300, height: 50)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.default)
+                    .disableAutocorrection(true)
+                
                 TextField("택시번호", text: $carNumber)
                     .frame(width: 300, height: 50)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.default)
                     .disableAutocorrection(true)
+                
+                TextField("택시이름", text: $carName)
+                    .frame(width: 300, height: 50)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.default)
+                    .disableAutocorrection(true)
+                
+                Spacer()
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
