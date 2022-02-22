@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct MainView: View {
     @StateObject private var viewModel = MainViewModel()
+    
+    var coordinate: CLLocationCoordinate2D? {
+        viewModel.lastSeenLocation?.coordinate
+    }
     
     var body: some View {
         NavigationView {
@@ -23,7 +28,7 @@ struct MainView: View {
                 .font(Font.body.bold())
                 .frame(width: 220)
                 
-                Button(action: {}) {
+                Button(action: {print(String(coordinate?.latitude ?? 0))}) {
                     Text("승차")
                         .frame(width: 220, height: 50)
                 }
@@ -64,6 +69,7 @@ struct MainView: View {
             }
             .onAppear {
                 viewModel.loadMe()
+                viewModel.requestPermission()
             }
         }.navigationBarHidden(true)
     }
@@ -80,4 +86,5 @@ struct MainView_Previews: PreviewProvider {
 // after 승객 하차, 요금 결제 다이얼로그 띄우기
 // 출퇴근 버튼 동작으로 서버에 위치 보내기 및 멈추기
 // 승객 승차 중, 콜 요청 불가능
+// 위치 관련: ws://172.30.1.17/app/empty/update 에 위도,경도 값만 보내기
 

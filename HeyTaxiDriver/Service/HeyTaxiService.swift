@@ -30,7 +30,7 @@ struct TaxiResponse: Codable {
 }
 
 class HeyTaxiService {
-    private let baseUrl = "http://172.30.1.36"
+    private let baseUrl = "http://172.30.1.17"
     static let shared = HeyTaxiService()
     
     let header: HTTPHeaders = [

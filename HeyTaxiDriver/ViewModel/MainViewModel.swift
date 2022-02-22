@@ -7,12 +7,39 @@
 
 import Foundation
 import StompClientLib
+import CoreLocation
 
-class MainViewModel: ObservableObject, StompClientLibDelegate {
-    private let url = NSURL(string: "ws://172.30.1.36/heytaxi-ws/websocket")
+class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, StompClientLibDelegate {
+    private let url = NSURL(string: "ws://172.30.1.17/heytaxi-ws/websocket")
     @Published private var socketClient = StompClientLib()
     @Published var user: UserModel?
     @Published var taxi: TaxiModel?
+    @Published var authorizationStatus: CLAuthorizationStatus
+    private let locationManager: CLLocationManager
+    @Published var lastSeenLocation: CLLocation?
+
+    override init() {
+        locationManager = CLLocationManager()
+        authorizationStatus = locationManager.authorizationStatus
+
+        super.init()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        lastSeenLocation = locations.first
+        
+    }
+    
+    func requestPermission() {
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        authorizationStatus = manager.authorizationStatus
+    }
     
     func loadMe() {
         HeyTaxiService.shared.loadMe {

@@ -31,6 +31,7 @@
 		E285A04327AFB131007238BC /* TokenUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E285A04227AFB131007238BC /* TokenUtils.swift */; };
 		E29D9FF827AD5AC40078392B /* VerifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D9FF727AD5AC40078392B /* VerifyViewModel.swift */; };
 		E2C89CA127B4F82C00A12705 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C89CA027B4F82C00A12705 /* ProfileView.swift */; };
+		E2E8231E27C4C64700CAE557 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8231D27C4C64700CAE557 /* LocationView.swift */; };
 		E2ED5D8E27A67A93003CF311 /* TaxiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED5D8D27A67A93003CF311 /* TaxiModel.swift */; };
 		E2ED5D9027A67B90003CF311 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED5D8F27A67B90003CF311 /* UserModel.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		E285A04227AFB131007238BC /* TokenUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtils.swift; sourceTree = "<group>"; };
 		E29D9FF727AD5AC40078392B /* VerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewModel.swift; sourceTree = "<group>"; };
 		E2C89CA027B4F82C00A12705 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E2E8231D27C4C64700CAE557 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		E2ED5D8D27A67A93003CF311 /* TaxiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiModel.swift; sourceTree = "<group>"; };
 		E2ED5D8F27A67B90003CF311 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F917EFA3CA0ED7F5EF2080CA /* Pods-HeyTaxiDriverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriverTests.release.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				E278324727A6E5F10061E6D7 /* VerifiedView.swift */,
 				E278324B27A6E8A20061E6D7 /* VerifyView.swift */,
 				E2C89CA027B4F82C00A12705 /* ProfileView.swift */,
+				E2E8231D27C4C64700CAE557 /* LocationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				E285A04027AF9ACF007238BC /* MainViewModel.swift in Sources */,
 				E285A04327AFB131007238BC /* TokenUtils.swift in Sources */,
 				E20C1F3527A53FD7000DF905 /* ContentView.swift in Sources */,
+				E2E8231E27C4C64700CAE557 /* LocationView.swift in Sources */,
 				E278324827A6E5F10061E6D7 /* VerifiedView.swift in Sources */,
 				E2C89CA127B4F82C00A12705 /* ProfileView.swift in Sources */,
 				E25605E227AA396700EFC181 /* SplashViewModel.swift in Sources */,
