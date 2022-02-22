@@ -28,7 +28,7 @@ struct MainView: View {
                 .font(Font.body.bold())
                 .frame(width: 220)
                 
-                Button(action: {print(String(coordinate?.latitude ?? 0))}) {
+                Button(action: {viewModel.sendLocation()}) {
                     Text("승차")
                         .frame(width: 220, height: 50)
                 }
@@ -70,6 +70,7 @@ struct MainView: View {
             .onAppear {
                 viewModel.loadMe()
                 viewModel.requestPermission()
+                viewModel.registerSocket()
             }
         }.navigationBarHidden(true)
     }

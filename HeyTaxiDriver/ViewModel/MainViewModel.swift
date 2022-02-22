@@ -61,7 +61,11 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     }
     
     func sendLocation() {
+        var location : EmptyCarModel = EmptyCarModel(taxi: nil, location: LocationModel(latitude: Double(lastSeenLocation?.coordinate.latitude ?? 0), longitude: Double(lastSeenLocation?.coordinate.longitude ?? 0)))
+        let encoder = try! JSONEncoder().encode(location)
+        let result = String(data: encoder, encoding: .utf8)
         
+        socketClient.sendMessage(message: result!, toDestination: "/app/empty/update", withHeaders: ["Authorization": TokenUtils.getToken(serviceID: "http://172.30.1.17")!, "content-type": "application/json"], withReceipt: nil)
     }
     
     //unsubscribe

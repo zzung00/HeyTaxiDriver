@@ -11,7 +11,7 @@ struct EmptyCarModel: Codable {
     let taxi: TaxiModel?
     let location: LocationModel
     
-    init(taxi: TaxiModel, location: LocationModel) {
+    init(taxi: TaxiModel?, location: LocationModel) {
         self.taxi = taxi
         self.location = location
     }
