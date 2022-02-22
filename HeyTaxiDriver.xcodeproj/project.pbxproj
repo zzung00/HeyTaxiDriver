@@ -32,6 +32,8 @@
 		E29D9FF827AD5AC40078392B /* VerifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D9FF727AD5AC40078392B /* VerifyViewModel.swift */; };
 		E2C89CA127B4F82C00A12705 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C89CA027B4F82C00A12705 /* ProfileView.swift */; };
 		E2E8231E27C4C64700CAE557 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8231D27C4C64700CAE557 /* LocationView.swift */; };
+		E2E8232027C4CFFA00CAE557 /* EmptyCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8231F27C4CFFA00CAE557 /* EmptyCarModel.swift */; };
+		E2E8232227C4D09500CAE557 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8232127C4D09500CAE557 /* LocationModel.swift */; };
 		E2ED5D8E27A67A93003CF311 /* TaxiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED5D8D27A67A93003CF311 /* TaxiModel.swift */; };
 		E2ED5D9027A67B90003CF311 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED5D8F27A67B90003CF311 /* UserModel.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +90,8 @@
 		E29D9FF727AD5AC40078392B /* VerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewModel.swift; sourceTree = "<group>"; };
 		E2C89CA027B4F82C00A12705 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E2E8231D27C4C64700CAE557 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		E2E8231F27C4CFFA00CAE557 /* EmptyCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCarModel.swift; sourceTree = "<group>"; };
+		E2E8232127C4D09500CAE557 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		E2ED5D8D27A67A93003CF311 /* TaxiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiModel.swift; sourceTree = "<group>"; };
 		E2ED5D8F27A67B90003CF311 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F917EFA3CA0ED7F5EF2080CA /* Pods-HeyTaxiDriverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriverTests.release.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 			children = (
 				E2ED5D8F27A67B90003CF311 /* UserModel.swift */,
 				E2ED5D8D27A67A93003CF311 /* TaxiModel.swift */,
+				E2E8231F27C4CFFA00CAE557 /* EmptyCarModel.swift */,
+				E2E8232127C4D09500CAE557 /* LocationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -549,11 +555,13 @@
 				E285A04327AFB131007238BC /* TokenUtils.swift in Sources */,
 				E20C1F3527A53FD7000DF905 /* ContentView.swift in Sources */,
 				E2E8231E27C4C64700CAE557 /* LocationView.swift in Sources */,
+				E2E8232227C4D09500CAE557 /* LocationModel.swift in Sources */,
 				E278324827A6E5F10061E6D7 /* VerifiedView.swift in Sources */,
 				E2C89CA127B4F82C00A12705 /* ProfileView.swift in Sources */,
 				E25605E227AA396700EFC181 /* SplashViewModel.swift in Sources */,
 				E20C1F6027A5422B000DF905 /* MainView.swift in Sources */,
 				E209836C27A6657A002A6E91 /* UIColorExtension.swift in Sources */,
+				E2E8232027C4CFFA00CAE557 /* EmptyCarModel.swift in Sources */,
 				E20C1F3327A53FD7000DF905 /* HeyTaxiDriverApp.swift in Sources */,
 				E25921AD27B79904004379D6 /* ProfileViewModel.swift in Sources */,
 				E2ED5D9027A67B90003CF311 /* UserModel.swift in Sources */,

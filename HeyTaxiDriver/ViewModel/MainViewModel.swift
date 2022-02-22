@@ -52,12 +52,16 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     
     //socket connection
     func registerSocket() {
-        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url as! URL), delegate: self as! StompClientLibDelegate, connectionHeaders: ["Authorization": TokenUtils.getToken(serviceID: "http://172.30.1.36")!])
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url as! URL), delegate: self as! StompClientLibDelegate, connectionHeaders: ["Authorization": TokenUtils.getToken(serviceID: "http://172.30.1.17")!])
     }
     
     func subscribe() {
         socketClient.subscribe(destination: "/user/\(self.user?.username)/topic/error")
         socketClient.subscribe(destination: "/user/\(self.user?.username)/topic/reservation")
+    }
+    
+    func sendLocation() {
+        
     }
     
     //unsubscribe
