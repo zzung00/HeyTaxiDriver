@@ -56,10 +56,10 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     }
     
     func subscribe() {
-        socketClient.subscribe(destination: "/user/\((self.user!.username)!)/topic/error")
+        socketClient.subscribe(destination: "/user/topic/error")
         socketClient.subscribe(destination: "/user/\((self.user!.username)!)/topic/reservation")
         socketClient.subscribe(destination: "/topic/empty")
-        print("/user/\((self.user!.username)!)/topic/error")
+        print("/user/topic/error")
     }
     
     func sendLocation() {
