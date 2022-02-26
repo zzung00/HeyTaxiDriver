@@ -17,6 +17,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     @Published var authorizationStatus: CLAuthorizationStatus
     private let locationManager: CLLocationManager
     @Published var lastSeenLocation: CLLocation?
+    private var status = TaxiStatus.off
 
     override init() {
         locationManager = CLLocationManager()
@@ -26,11 +27,15 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
+        locationManager.startMonitoringSignificantLocationChanges()
     }
     
+    //빈 차인 경우, 위치 변경될때마다 실시간 업데이트
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         lastSeenLocation = locations.first
-        
+        if (status == TaxiStatus.empty) {
+            sendLocation()
+        }
     }
     
     func requestPermission() {
@@ -48,6 +53,10 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
                 self.user = result.user
             }
         }
+    }
+    
+    func setStatus(status: TaxiStatus) {
+        self.status = status
     }
     
     //socket connection
