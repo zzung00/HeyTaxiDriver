@@ -52,12 +52,14 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     
     //socket connection
     func registerSocket() {
-        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url as! URL), delegate: self as! StompClientLibDelegate, connectionHeaders: ["Authorization": TokenUtils.getToken(serviceID: "http://14.55.30.70")!])
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url as! URL), delegate: self as! StompClientLibDelegate, connectionHeaders: ["Authorization": TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)!])
     }
     
     func subscribe() {
-        socketClient.subscribe(destination: "/user/\(self.user?.username)/topic/error")
-        socketClient.subscribe(destination: "/user/\(self.user?.username)/topic/reservation")
+        socketClient.subscribe(destination: "/user/\((self.user!.username)!)/topic/error")
+        socketClient.subscribe(destination: "/user/\((self.user!.username)!)/topic/reservation")
+        socketClient.subscribe(destination: "/topic/empty")
+        print("/user/\((self.user!.username)!)/topic/error")
     }
     
     func sendLocation() {
@@ -65,7 +67,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
         let encoder = try! JSONEncoder().encode(location)
         let result = String(data: encoder, encoding: .utf8)
         
-        socketClient.sendMessage(message: result!, toDestination: "/app/empty/update", withHeaders: ["Authorization": TokenUtils.getToken(serviceID: "http://14.55.30.70")!, "content-type": "application/json"], withReceipt: nil)
+        socketClient.sendMessage(message: result!, toDestination: "/app/empty/update", withHeaders: ["Authorization": TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)!, "content-type": "application/json"], withReceipt: nil)
     }
     
     //unsubscribe
@@ -74,7 +76,13 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     }
     
     func stompClient(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: AnyObject?, akaStringBody stringBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
-        
+        print(destination)
+        print(jsonBody!)
+    }
+    
+    func stompClientJSONBody(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
+        print("des :" + destination)
+        print("jb : " + jsonBody!)
     }
 
     func stompClientDidDisconnect(client: StompClientLib!) {
