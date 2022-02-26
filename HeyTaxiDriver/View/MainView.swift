@@ -11,10 +11,6 @@ import CoreLocation
 struct MainView: View {
     @StateObject private var viewModel = MainViewModel()
     
-    var coordinate: CLLocationCoordinate2D? {
-        viewModel.lastSeenLocation?.coordinate
-    }
-    
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 30) {
@@ -87,5 +83,4 @@ struct MainView_Previews: PreviewProvider {
 // after 승객 하차, 요금 결제 다이얼로그 띄우기
 // 출퇴근 버튼 동작으로 서버에 위치 보내기 및 멈추기
 // 승객 승차 중, 콜 요청 불가능
-// 위치 관련: ws://172.30.1.17/app/empty/update 에 위도,경도 값만 보내기
 

@@ -10,7 +10,7 @@ import StompClientLib
 import CoreLocation
 
 class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, StompClientLibDelegate {
-    private let url = NSURL(string: "ws://172.30.1.17/heytaxi-ws/websocket")
+    private let url = NSURL(string: "ws://\(HeyTaxiService.host)/heytaxi-ws/websocket")
     @Published private var socketClient = StompClientLib()
     @Published var user: UserModel?
     @Published var taxi: TaxiModel?
@@ -52,7 +52,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     
     //socket connection
     func registerSocket() {
-        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url as! URL), delegate: self as! StompClientLibDelegate, connectionHeaders: ["Authorization": TokenUtils.getToken(serviceID: "http://172.30.1.17")!])
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url as! URL), delegate: self as! StompClientLibDelegate, connectionHeaders: ["Authorization": TokenUtils.getToken(serviceID: "http://14.55.30.70")!])
     }
     
     func subscribe() {
@@ -65,7 +65,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
         let encoder = try! JSONEncoder().encode(location)
         let result = String(data: encoder, encoding: .utf8)
         
-        socketClient.sendMessage(message: result!, toDestination: "/app/empty/update", withHeaders: ["Authorization": TokenUtils.getToken(serviceID: "http://172.30.1.17")!, "content-type": "application/json"], withReceipt: nil)
+        socketClient.sendMessage(message: result!, toDestination: "/app/empty/update", withHeaders: ["Authorization": TokenUtils.getToken(serviceID: "http://14.55.30.70")!, "content-type": "application/json"], withReceipt: nil)
     }
     
     //unsubscribe

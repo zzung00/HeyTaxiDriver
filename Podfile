@@ -7,16 +7,11 @@ target 'HeyTaxiDriver' do
 
   # Pods for HeyTaxiDriver
   pod 'Alamofire'
-  pod 'RxSwift'
-  pod 'RxCocoa'
   pod 'StompClientLib'
 
   target 'HeyTaxiDriverTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Alamofire'
-    pod 'RxBlocking'
-    pod 'RxTest'
   end
 
   target 'HeyTaxiDriverUITests' do

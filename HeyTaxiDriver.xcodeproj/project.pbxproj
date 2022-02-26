@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32DDFBC34E025FF851A73CDE /* Pods_HeyTaxiDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885D44E804F8782710443015 /* Pods_HeyTaxiDriver.framework */; };
-		69331D16269A4F8321B5705A /* Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C644DDCA88C2A203A944C43 /* Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework */; };
-		A1106AA6DFA6E1DF58DF7333 /* Pods_HeyTaxiDriverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB80C1561FD10B78EA2869D /* Pods_HeyTaxiDriverTests.framework */; };
+		184613DDEE2073A79359CCFD /* Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94C764188BDF6F6DFB942C3 /* Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework */; };
+		61E529058E0DF124C8475DF8 /* Pods_HeyTaxiDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504F0851F942D13C2ECEB0B9 /* Pods_HeyTaxiDriver.framework */; };
+		A206CBC7535EB301FCBF2E66 /* Pods_HeyTaxiDriverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E362AD90106E2FA526DAD15A /* Pods_HeyTaxiDriverTests.framework */; };
 		E209836C27A6657A002A6E91 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209836B27A6657A002A6E91 /* UIColorExtension.swift */; };
 		E209836D27A66D5C002A6E91 /* JalnanOTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = E209836927A66237002A6E91 /* JalnanOTF.otf */; };
 		E209837127A6775B002A6E91 /* HeyTaxiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209837027A6775B002A6E91 /* HeyTaxiService.swift */; };
@@ -31,7 +31,6 @@
 		E285A04327AFB131007238BC /* TokenUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E285A04227AFB131007238BC /* TokenUtils.swift */; };
 		E29D9FF827AD5AC40078392B /* VerifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D9FF727AD5AC40078392B /* VerifyViewModel.swift */; };
 		E2C89CA127B4F82C00A12705 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C89CA027B4F82C00A12705 /* ProfileView.swift */; };
-		E2E8231E27C4C64700CAE557 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8231D27C4C64700CAE557 /* LocationView.swift */; };
 		E2E8232027C4CFFA00CAE557 /* EmptyCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8231F27C4CFFA00CAE557 /* EmptyCarModel.swift */; };
 		E2E8232227C4D09500CAE557 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8232127C4D09500CAE557 /* LocationModel.swift */; };
 		E2ED5D8E27A67A93003CF311 /* TaxiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED5D8D27A67A93003CF311 /* TaxiModel.swift */; };
@@ -56,14 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		115D20A5FE04AC5F5002E755 /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriver-HeyTaxiDriverUITests.release.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriver-HeyTaxiDriverUITests/Pods-HeyTaxiDriver-HeyTaxiDriverUITests.release.xcconfig"; sourceTree = "<group>"; };
-		1CB80C1561FD10B78EA2869D /* Pods_HeyTaxiDriverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeyTaxiDriverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		327E3D971EFC48BF72C89666 /* Pods-HeyTaxiDriver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriver.release.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriver/Pods-HeyTaxiDriver.release.xcconfig"; sourceTree = "<group>"; };
-		461463BA355C59EB1E5F00C2 /* Pods-HeyTaxiDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriver.debug.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriver/Pods-HeyTaxiDriver.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCF617754DD3116D639E21E /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriver-HeyTaxiDriverUITests.debug.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriver-HeyTaxiDriverUITests/Pods-HeyTaxiDriver-HeyTaxiDriverUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		885D44E804F8782710443015 /* Pods_HeyTaxiDriver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeyTaxiDriver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C644DDCA88C2A203A944C43 /* Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C974A49B63810B44DE30F870 /* Pods-HeyTaxiDriverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriverTests.debug.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		06A50AF4D6F0E3608A7D699A /* Pods-HeyTaxiDriverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriverTests.debug.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F0A1083E72E4493EDF150AE /* Pods-HeyTaxiDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriver.debug.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriver/Pods-HeyTaxiDriver.debug.xcconfig"; sourceTree = "<group>"; };
+		504F0851F942D13C2ECEB0B9 /* Pods_HeyTaxiDriver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeyTaxiDriver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77AE70FD71353941DBFC884C /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriver-HeyTaxiDriverUITests.debug.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriver-HeyTaxiDriverUITests/Pods-HeyTaxiDriver-HeyTaxiDriverUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1FDE462A3F6C731A61AD57D /* Pods-HeyTaxiDriver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriver.release.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriver/Pods-HeyTaxiDriver.release.xcconfig"; sourceTree = "<group>"; };
+		D94C764188BDF6F6DFB942C3 /* Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D46AF6FC9F7A1E72485A33 /* Pods-HeyTaxiDriverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriverTests.release.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests.release.xcconfig"; sourceTree = "<group>"; };
 		E209836927A66237002A6E91 /* JalnanOTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JalnanOTF.otf; sourceTree = "<group>"; };
 		E209836B27A6657A002A6E91 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E209836E27A66E08002A6E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -89,12 +87,12 @@
 		E285A04227AFB131007238BC /* TokenUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtils.swift; sourceTree = "<group>"; };
 		E29D9FF727AD5AC40078392B /* VerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewModel.swift; sourceTree = "<group>"; };
 		E2C89CA027B4F82C00A12705 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		E2E8231D27C4C64700CAE557 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		E2E8231F27C4CFFA00CAE557 /* EmptyCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCarModel.swift; sourceTree = "<group>"; };
 		E2E8232127C4D09500CAE557 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		E2ED5D8D27A67A93003CF311 /* TaxiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiModel.swift; sourceTree = "<group>"; };
 		E2ED5D8F27A67B90003CF311 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		F917EFA3CA0ED7F5EF2080CA /* Pods-HeyTaxiDriverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriverTests.release.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests.release.xcconfig"; sourceTree = "<group>"; };
+		E362AD90106E2FA526DAD15A /* Pods_HeyTaxiDriverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeyTaxiDriverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F922880D84114FFEE47763AB /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyTaxiDriver-HeyTaxiDriverUITests.release.xcconfig"; path = "Target Support Files/Pods-HeyTaxiDriver-HeyTaxiDriverUITests/Pods-HeyTaxiDriver-HeyTaxiDriverUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32DDFBC34E025FF851A73CDE /* Pods_HeyTaxiDriver.framework in Frameworks */,
+				61E529058E0DF124C8475DF8 /* Pods_HeyTaxiDriver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1106AA6DFA6E1DF58DF7333 /* Pods_HeyTaxiDriverTests.framework in Frameworks */,
+				A206CBC7535EB301FCBF2E66 /* Pods_HeyTaxiDriverTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,34 +116,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69331D16269A4F8321B5705A /* Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework in Frameworks */,
+				184613DDEE2073A79359CCFD /* Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33B66D1EC54E7D9D0F1A9666 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				885D44E804F8782710443015 /* Pods_HeyTaxiDriver.framework */,
-				8C644DDCA88C2A203A944C43 /* Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework */,
-				1CB80C1561FD10B78EA2869D /* Pods_HeyTaxiDriverTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		8AB7A5D02B62D8DAF7808728 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				461463BA355C59EB1E5F00C2 /* Pods-HeyTaxiDriver.debug.xcconfig */,
-				327E3D971EFC48BF72C89666 /* Pods-HeyTaxiDriver.release.xcconfig */,
-				5DCF617754DD3116D639E21E /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.debug.xcconfig */,
-				115D20A5FE04AC5F5002E755 /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.release.xcconfig */,
-				C974A49B63810B44DE30F870 /* Pods-HeyTaxiDriverTests.debug.xcconfig */,
-				F917EFA3CA0ED7F5EF2080CA /* Pods-HeyTaxiDriverTests.release.xcconfig */,
+				1F0A1083E72E4493EDF150AE /* Pods-HeyTaxiDriver.debug.xcconfig */,
+				D1FDE462A3F6C731A61AD57D /* Pods-HeyTaxiDriver.release.xcconfig */,
+				77AE70FD71353941DBFC884C /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.debug.xcconfig */,
+				F922880D84114FFEE47763AB /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.release.xcconfig */,
+				06A50AF4D6F0E3608A7D699A /* Pods-HeyTaxiDriverTests.debug.xcconfig */,
+				E1D46AF6FC9F7A1E72485A33 /* Pods-HeyTaxiDriverTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CEE68B7A9247AC63CC9947BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				504F0851F942D13C2ECEB0B9 /* Pods_HeyTaxiDriver.framework */,
+				D94C764188BDF6F6DFB942C3 /* Pods_HeyTaxiDriver_HeyTaxiDriverUITests.framework */,
+				E362AD90106E2FA526DAD15A /* Pods_HeyTaxiDriverTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E209836727A661DB002A6E91 /* Support */ = {
@@ -189,7 +187,7 @@
 				E20C1F4C27A53FD8000DF905 /* HeyTaxiDriverUITests */,
 				E20C1F3027A53FD7000DF905 /* Products */,
 				8AB7A5D02B62D8DAF7808728 /* Pods */,
-				33B66D1EC54E7D9D0F1A9666 /* Frameworks */,
+				CEE68B7A9247AC63CC9947BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -254,7 +252,6 @@
 				E278324727A6E5F10061E6D7 /* VerifiedView.swift */,
 				E278324B27A6E8A20061E6D7 /* VerifyView.swift */,
 				E2C89CA027B4F82C00A12705 /* ProfileView.swift */,
-				E2E8231D27C4C64700CAE557 /* LocationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,11 +294,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E20C1F5327A53FD8000DF905 /* Build configuration list for PBXNativeTarget "HeyTaxiDriver" */;
 			buildPhases = (
-				D43D94E726765AEB8FDB1A39 /* [CP] Check Pods Manifest.lock */,
+				E25228F5304EEE1041EED0AC /* [CP] Check Pods Manifest.lock */,
 				E20C1F2B27A53FD7000DF905 /* Sources */,
 				E20C1F2C27A53FD7000DF905 /* Frameworks */,
 				E20C1F2D27A53FD7000DF905 /* Resources */,
-				3C057C5B310879E119CE2BF9 /* [CP] Embed Pods Frameworks */,
+				E811E24C6BC7966C14516495 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,11 +313,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E20C1F5627A53FD8000DF905 /* Build configuration list for PBXNativeTarget "HeyTaxiDriverTests" */;
 			buildPhases = (
-				2F3FB848CDABB3E54E7D9E63 /* [CP] Check Pods Manifest.lock */,
+				9569AA7FD3A3C0784AF8A887 /* [CP] Check Pods Manifest.lock */,
 				E20C1F3B27A53FD8000DF905 /* Sources */,
 				E20C1F3C27A53FD8000DF905 /* Frameworks */,
 				E20C1F3D27A53FD8000DF905 /* Resources */,
-				14F2C32D8954ACC5D1AF844C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -336,11 +332,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E20C1F5927A53FD8000DF905 /* Build configuration list for PBXNativeTarget "HeyTaxiDriverUITests" */;
 			buildPhases = (
-				65DBC1A83F792B2AC66AAE2D /* [CP] Check Pods Manifest.lock */,
+				FEAC315E0CE5A1A06218277A /* [CP] Check Pods Manifest.lock */,
 				E20C1F4527A53FD8000DF905 /* Sources */,
 				E20C1F4627A53FD8000DF905 /* Frameworks */,
 				E20C1F4727A53FD8000DF905 /* Resources */,
-				1556D570734B3AA2A266B1CA /* [CP] Embed Pods Frameworks */,
+				9EEA3F9337CB60BB9B72302F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -423,41 +419,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14F2C32D8954ACC5D1AF844C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriverTests/Pods-HeyTaxiDriverTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1556D570734B3AA2A266B1CA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver-HeyTaxiDriverUITests/Pods-HeyTaxiDriver-HeyTaxiDriverUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver-HeyTaxiDriverUITests/Pods-HeyTaxiDriver-HeyTaxiDriverUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver-HeyTaxiDriverUITests/Pods-HeyTaxiDriver-HeyTaxiDriverUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2F3FB848CDABB3E54E7D9E63 /* [CP] Check Pods Manifest.lock */ = {
+		9569AA7FD3A3C0784AF8A887 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -479,46 +441,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3C057C5B310879E119CE2BF9 /* [CP] Embed Pods Frameworks */ = {
+		9EEA3F9337CB60BB9B72302F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver/Pods-HeyTaxiDriver-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver-HeyTaxiDriverUITests/Pods-HeyTaxiDriver-HeyTaxiDriverUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver/Pods-HeyTaxiDriver-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver-HeyTaxiDriverUITests/Pods-HeyTaxiDriver-HeyTaxiDriverUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver/Pods-HeyTaxiDriver-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver-HeyTaxiDriverUITests/Pods-HeyTaxiDriver-HeyTaxiDriverUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		65DBC1A83F792B2AC66AAE2D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HeyTaxiDriver-HeyTaxiDriverUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D43D94E726765AEB8FDB1A39 /* [CP] Check Pods Manifest.lock */ = {
+		E25228F5304EEE1041EED0AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -540,6 +480,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E811E24C6BC7966C14516495 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver/Pods-HeyTaxiDriver-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver/Pods-HeyTaxiDriver-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyTaxiDriver/Pods-HeyTaxiDriver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEAC315E0CE5A1A06218277A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeyTaxiDriver-HeyTaxiDriverUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -554,7 +533,6 @@
 				E285A04027AF9ACF007238BC /* MainViewModel.swift in Sources */,
 				E285A04327AFB131007238BC /* TokenUtils.swift in Sources */,
 				E20C1F3527A53FD7000DF905 /* ContentView.swift in Sources */,
-				E2E8231E27C4C64700CAE557 /* LocationView.swift in Sources */,
 				E2E8232227C4D09500CAE557 /* LocationModel.swift in Sources */,
 				E278324827A6E5F10061E6D7 /* VerifiedView.swift in Sources */,
 				E2C89CA127B4F82C00A12705 /* ProfileView.swift in Sources */,
@@ -721,7 +699,7 @@
 		};
 		E20C1F5427A53FD8000DF905 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 461463BA355C59EB1E5F00C2 /* Pods-HeyTaxiDriver.debug.xcconfig */;
+			baseConfigurationReference = 1F0A1083E72E4493EDF150AE /* Pods-HeyTaxiDriver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -754,7 +732,7 @@
 		};
 		E20C1F5527A53FD8000DF905 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 327E3D971EFC48BF72C89666 /* Pods-HeyTaxiDriver.release.xcconfig */;
+			baseConfigurationReference = D1FDE462A3F6C731A61AD57D /* Pods-HeyTaxiDriver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -787,7 +765,7 @@
 		};
 		E20C1F5727A53FD8000DF905 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C974A49B63810B44DE30F870 /* Pods-HeyTaxiDriverTests.debug.xcconfig */;
+			baseConfigurationReference = 06A50AF4D6F0E3608A7D699A /* Pods-HeyTaxiDriverTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -808,7 +786,7 @@
 		};
 		E20C1F5827A53FD8000DF905 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F917EFA3CA0ED7F5EF2080CA /* Pods-HeyTaxiDriverTests.release.xcconfig */;
+			baseConfigurationReference = E1D46AF6FC9F7A1E72485A33 /* Pods-HeyTaxiDriverTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -829,7 +807,7 @@
 		};
 		E20C1F5A27A53FD8000DF905 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DCF617754DD3116D639E21E /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.debug.xcconfig */;
+			baseConfigurationReference = 77AE70FD71353941DBFC884C /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -848,7 +826,7 @@
 		};
 		E20C1F5B27A53FD8000DF905 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 115D20A5FE04AC5F5002E755 /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.release.xcconfig */;
+			baseConfigurationReference = F922880D84114FFEE47763AB /* Pods-HeyTaxiDriver-HeyTaxiDriverUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

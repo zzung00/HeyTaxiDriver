@@ -9,7 +9,6 @@ import Alamofire
 import Combine
 import Foundation
 import SwiftUI
-import RxSwift
 
 struct VerifyResponse: Codable {
     let success: Bool
@@ -30,7 +29,8 @@ struct TaxiResponse: Codable {
 }
 
 class HeyTaxiService {
-    private let baseUrl = "http://172.30.1.17"
+    static let host = "172.30.1.5"
+    static let baseUrl = "http://\(host)"
     static let shared = HeyTaxiService()
     
     let header: HTTPHeaders = [
@@ -39,7 +39,7 @@ class HeyTaxiService {
     ]
     
     func serverConnect(completion: @escaping (Bool) -> Void) {
-        AF.request(baseUrl, method: .get, encoding: JSONEncoding.default).responseJSON { response in
+        AF.request(HeyTaxiService.baseUrl, method: .get, encoding: JSONEncoding.default).responseJSON { response in
             DispatchQueue.main.async {
                 completion(response.response?.statusCode == 200)
             }
@@ -47,7 +47,7 @@ class HeyTaxiService {
     }
 
     func verifyRequest(phone: String, completion: @escaping (VerifyResponse) -> Void) {
-        let url: String = baseUrl + "/api/verify/request"
+        let url: String = HeyTaxiService.baseUrl + "/api/verify/request"
         let body: Parameters = [
             "phone": phone
         ]
@@ -70,7 +70,7 @@ class HeyTaxiService {
     }
     
     func verify(phone: String, clientSecret: String, code: String, completion: @escaping (VerifyResponse) -> Void) {
-        let url: String = baseUrl + "/api/verify/verify"
+        let url: String = HeyTaxiService.baseUrl + "/api/verify/verify"
         let body: Parameters = [
             "phone": phone,
             "clientSecret": clientSecret,
@@ -95,9 +95,9 @@ class HeyTaxiService {
     }
     
     func loadMe(completion: @escaping (UserResponse) -> Void) {
-        let url: String = baseUrl + "/api/user"
+        let url: String = HeyTaxiService.baseUrl + "/api/user"
         var header = self.header
-        let token = TokenUtils.getToken(serviceID: baseUrl)
+        let token = TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)
         
         if (token != nil) {
             header.add(name: "Authorization", value: token!)
@@ -122,9 +122,9 @@ class HeyTaxiService {
     }
     
     func loadTaxi(completion: @escaping (TaxiResponse) -> Void) {
-        let url:String = baseUrl + "/api/taxi"
+        let url:String = HeyTaxiService.baseUrl + "/api/taxi"
         var header = self.header
-        let token = TokenUtils.getToken(serviceID: baseUrl)
+        let token = TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)
         
         if (token != nil) {
             header.add(name: "Authorization", value: token!)
@@ -151,9 +151,9 @@ class HeyTaxiService {
     }
     
     func registerTaxi(name: String, carNumber: String, completion: @escaping (TaxiResponse) -> Void) {
-        let url: String = baseUrl + "/api/taxi"
+        let url: String = HeyTaxiService.baseUrl + "/api/taxi"
         var header = self.header
-        let token = TokenUtils.getToken(serviceID: baseUrl)
+        let token = TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)
         if (token != nil) {
             header.add(name: "Authorization", value: token!)
         }
