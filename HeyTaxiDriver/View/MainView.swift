@@ -14,7 +14,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 30) {
-                Button(action: {}) {
+                Button(action: {viewModel.setStatus(status: TaxiStatus.empty)}) {
                     Text("빈 차")
                         .frame(width: 220, height: 50)
                 }
@@ -24,7 +24,7 @@ struct MainView: View {
                 .font(Font.body.bold())
                 .frame(width: 220)
                 
-                Button(action: {viewModel.sendLocation()}) {
+                Button(action: {}) {
                     Text("승차")
                         .frame(width: 220, height: 50)
                 }
@@ -44,7 +44,7 @@ struct MainView: View {
                 .font(Font.body.bold())
                 .frame(width: 220)
                 
-                Button(action: {}) {
+                Button(action: {viewModel.setStatus(status: TaxiStatus.off)}) {
                     Text("퇴근")
                         .frame(width: 220, height: 50)
                 }
@@ -84,3 +84,5 @@ struct MainView_Previews: PreviewProvider {
 // 출퇴근 버튼 동작으로 서버에 위치 보내기 및 멈추기
 // 승객 승차 중, 콜 요청 불가능
 
+// car status(0: 빈차 및 on, 1: 예약, 2: 퇴근 및 승차)
+// 상단에 택시 상태 문구 표시...
