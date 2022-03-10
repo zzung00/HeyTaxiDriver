@@ -16,20 +16,11 @@ struct ProfileView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 10) {
-                Image("taxi")
+                Image(systemName: "car")
                     .resizable()
                     .renderingMode(.template)
-                    .foregroundColor(.white)
-                    .frame(width: 250, height: 250)
-                    .background(
-                        Circle()
-                            .fill(Color.mainGreen)
-                    )
-                    .overlay(
-                        Circle()
-                            .stroke(Color.white, lineWidth: 4)
-                    )
-                    .shadow(radius: 10)
+                    .foregroundColor(.mainGreen)
+                    .frame(width: 200, height: 200)
                 
                 Spacer()
                 
