@@ -66,9 +66,8 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     
     func subscribe() {
         socketClient.subscribe(destination: "/user/topic/error")
-        socketClient.subscribe(destination: "/user/\((self.user!.username)!)/topic/reservation")
+        socketClient.subscribe(destination: "/user/topic/reservation") // 사용자 정보가 담김, 드라이버가 수락을 눌러야 매칭 완료
         socketClient.subscribe(destination: "/topic/empty")
-        print("/user/topic/error")
     }
     
     func sendLocation() {
@@ -78,6 +77,27 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
         
         socketClient.sendMessage(message: result!, toDestination: "/app/empty/update", withHeaders: ["Authorization": TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)!, "content-type": "application/json"], withReceipt: nil)
     }
+    
+    func allowReservation() {
+        let location : CallModel = CallModel(src: LocationModel(latitude: Double(lastSeenLocation?.coordinate.latitude ?? 0), longitude: Double(lastSeenLocation?.coordinate.longitude ?? 0)), dest: LocationModel(latitude: Double(lastSeenLocation?.coordinate.latitude ?? 0), longitude: Double(lastSeenLocation?.coordinate.longitude ?? 0)))
+        let encoder = try! JSONEncoder().encode(location)
+        let result = String(data: encoder, encoding: .utf8)
+        
+        socketClient.sendMessage(message: result!, toDestination: "/app/reservation/allow", withHeaders: ["Authorization" : TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)!, "content-type": "application/json"], withReceipt: nil)
+    }
+    
+    func rejectReservation() {
+        let location : CallModel = CallModel(src: LocationModel(latitude: Double(lastSeenLocation?.coordinate.latitude ?? 0), longitude: Double(lastSeenLocation?.coordinate.longitude ?? 0)), dest: LocationModel(latitude: Double(lastSeenLocation?.coordinate.latitude ?? 0), longitude: Double(lastSeenLocation?.coordinate.longitude ?? 0)))
+        let encoder = try! JSONEncoder().encode(location)
+        let result = String(data: encoder, encoding: .utf8)
+        
+        socketClient.sendMessage(message: result!, toDestination: "/app/reservation/reject", withHeaders: ["Authorization": TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)!, "content-type": "application/json"], withReceipt: nil)
+    }
+    
+    // 사용자의 위치가 담긴 후, 예약 관련 다이얼로그 표시
+    // 수락: /app/reservation/allow
+    // 거절: /app/reservation/reject
+    // 다이얼로그에 수락 및 거절 버튼 생성 후, 그에 맞는 sendMessage 설정
     
     //unsubscribe
     func disconnect() {

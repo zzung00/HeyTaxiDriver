@@ -25,6 +25,7 @@
 		E25605E227AA396700EFC181 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25605E127AA396700EFC181 /* SplashViewModel.swift */; };
 		E25921AD27B79904004379D6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25921AC27B79904004379D6 /* ProfileViewModel.swift */; };
 		E260A3EE27AE5AE10043CD53 /* VerifiedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A3ED27AE5AE10043CD53 /* VerifiedViewModel.swift */; };
+		E2754F3227FC311E0002C0E4 /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2754F3127FC311E0002C0E4 /* CallModel.swift */; };
 		E278324827A6E5F10061E6D7 /* VerifiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278324727A6E5F10061E6D7 /* VerifiedView.swift */; };
 		E278324C27A6E8A20061E6D7 /* VerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278324B27A6E8A20061E6D7 /* VerifyView.swift */; };
 		E285A04027AF9ACF007238BC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E285A03F27AF9ACF007238BC /* MainViewModel.swift */; };
@@ -81,6 +82,7 @@
 		E25605E127AA396700EFC181 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		E25921AC27B79904004379D6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		E260A3ED27AE5AE10043CD53 /* VerifiedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedViewModel.swift; sourceTree = "<group>"; };
+		E2754F3127FC311E0002C0E4 /* CallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallModel.swift; sourceTree = "<group>"; };
 		E278324727A6E5F10061E6D7 /* VerifiedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedView.swift; sourceTree = "<group>"; };
 		E278324B27A6E8A20061E6D7 /* VerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyView.swift; sourceTree = "<group>"; };
 		E285A03F27AF9ACF007238BC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				E2ED5D8D27A67A93003CF311 /* TaxiModel.swift */,
 				E2E8231F27C4CFFA00CAE557 /* EmptyCarModel.swift */,
 				E2E8232127C4D09500CAE557 /* LocationModel.swift */,
+				E2754F3127FC311E0002C0E4 /* CallModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				E2ED5D9027A67B90003CF311 /* UserModel.swift in Sources */,
 				E278324C27A6E8A20061E6D7 /* VerifyView.swift in Sources */,
 				E20C1F5E27A54107000DF905 /* SplashView.swift in Sources */,
+				E2754F3227FC311E0002C0E4 /* CallModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
