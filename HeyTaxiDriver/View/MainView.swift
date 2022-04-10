@@ -71,7 +71,11 @@ struct MainView: View {
             }
             
             .alert(isPresented: $viewModel.reserveAlert) {
-                Alert(title: Text("HeyTaxi"), message: Text("콜 수락하시겠습니까? \(String(describing: viewModel.reservationInfo!.call.dst))"), primaryButton: .destructive(Text("수락")), secondaryButton: .cancel(Text("거절")))
+                Alert(title: Text("HeyTaxi"), message: Text("콜 수락하시겠습니까? \(String(describing: viewModel.reservationInfo!.call.dst))"), primaryButton: .destructive(Text("수락"))
+                      {viewModel.allowReservation()}
+                      , secondaryButton: .cancel(Text("거절"))
+                      {viewModel.rejectReservation()}
+                )
             }
             
         }.navigationBarHidden(true)
