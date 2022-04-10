@@ -98,9 +98,6 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
         status = TaxiStatus.empty
     }
     
-    // 사용자의 위치가 담긴 후, 예약 관련 다이얼로그 표시
-    // 다이얼로그에 수락 및 거절 버튼 생성 후, 그에 맞는 sendMessage 설정
-    
     //unsubscribe
     func disconnect() {
         socketClient.disconnect()

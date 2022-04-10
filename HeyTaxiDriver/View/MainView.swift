@@ -85,9 +85,7 @@ struct MainView_Previews: PreviewProvider {
 }
 
 // 콜 수락은 dialog 띄우고 타이머 5초 유지
-// after 콜 수락, 예약 표시(사용자 위치) 하단에 띄우기
 // after 승객 하차, 요금 결제 다이얼로그 띄우기
-// 승객 승차 중, 콜 요청 불가능
 
 // car status(0: 빈차 및 on, 1: 예약, 2: 퇴근 및 승차)
 // 상단에 택시 상태 문구 표시...
