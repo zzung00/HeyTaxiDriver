@@ -10,6 +10,7 @@ import CoreLocation
 
 struct MainView: View {
     @StateObject private var viewModel = MainViewModel()
+    @State private var dst = ""
     
     var body: some View {
         NavigationView {
@@ -68,6 +69,11 @@ struct MainView: View {
                 viewModel.requestPermission()
                 viewModel.registerSocket()
             }
+            
+            .alert(isPresented: $viewModel.reserveAlert) {
+                Alert(title: Text("HeyTaxi"), message: Text("콜 수락하시겠습니까? \(String(describing: viewModel.reservationInfo!.call.dst))"), primaryButton: .destructive(Text("수락")), secondaryButton: .cancel(Text("거절")))
+            }
+            
         }.navigationBarHidden(true)
     }
 }
@@ -81,7 +87,6 @@ struct MainView_Previews: PreviewProvider {
 // 콜 수락은 dialog 띄우고 타이머 5초 유지
 // after 콜 수락, 예약 표시(사용자 위치) 하단에 띄우기
 // after 승객 하차, 요금 결제 다이얼로그 띄우기
-// 출퇴근 버튼 동작으로 서버에 위치 보내기 및 멈추기
 // 승객 승차 중, 콜 요청 불가능
 
 // car status(0: 빈차 및 on, 1: 예약, 2: 퇴근 및 승차)

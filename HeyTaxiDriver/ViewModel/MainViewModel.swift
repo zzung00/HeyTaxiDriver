@@ -8,6 +8,7 @@
 import Foundation
 import StompClientLib
 import CoreLocation
+import SwiftUI
 
 class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, StompClientLibDelegate {
     private let url = NSURL(string: "ws://\(HeyTaxiService.host)/heytaxi-ws/websocket")
@@ -18,7 +19,9 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     private let locationManager: CLLocationManager
     @Published var lastSeenLocation: CLLocation?
     private var status = TaxiStatus.off
-
+    @Published var reserveAlert: Bool = false
+    @Published var reservationInfo: ReservationModel?
+    
     override init() {
         locationManager = CLLocationManager()
         authorizationStatus = locationManager.authorizationStatus
@@ -83,6 +86,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
         let result = String(data: encoder, encoding: .utf8)
         
         socketClient.sendMessage(message: result!, toDestination: "/app/reservation/allow", withHeaders: ["Authorization" : TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)!, "content-type": "application/json"], withReceipt: nil)
+        status = TaxiStatus.reservation
     }
     
     func rejectReservation() {
@@ -91,6 +95,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
         let result = String(data: encoder, encoding: .utf8)
         
         socketClient.sendMessage(message: result!, toDestination: "/app/reservation/reject", withHeaders: ["Authorization": TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)!, "content-type": "application/json"], withReceipt: nil)
+        status = TaxiStatus.empty
     }
     
     // 사용자의 위치가 담긴 후, 예약 관련 다이얼로그 표시
@@ -102,8 +107,19 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     }
     
     func stompClient(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: AnyObject?, akaStringBody stringBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
-        print(destination)
+        let data = try! JSONSerialization.data(withJSONObject: jsonBody!, options: .prettyPrinted)
+        let decoder = JSONDecoder()
         print(jsonBody!)
+        
+        switch destination {
+        case "/user/topic/reservation":
+            reserveAlert = true
+            status = TaxiStatus.off
+            reservationInfo = try! decoder.decode(ReservationModel.self, from: data)
+            print(reservationInfo)
+        default:
+            return
+        }
     }
     
     func stompClientJSONBody(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
