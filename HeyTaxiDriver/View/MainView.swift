@@ -29,24 +29,14 @@ struct MainView: View {
                     Text("승차")
                         .frame(width: 220, height: 50)
                 }
-                .background(Color.mainGreen)
-                .cornerRadius(10)
-                .foregroundColor(.white)
-                .font(Font.body.bold())
-                .frame(width: 220)
-                
-                Button(action: {}) {
-                    Text("출근")
-                        .frame(width: 220, height: 50)
-                }
                 .background(Color.on)
                 .cornerRadius(10)
                 .foregroundColor(.white)
                 .font(Font.body.bold())
                 .frame(width: 220)
                 
-                Button(action: {viewModel.setStatus(status: TaxiStatus.off)}) {
-                    Text("퇴근")
+                Button(action: {}) {
+                    Text("하차")
                         .frame(width: 220, height: 50)
                 }
                 .background(Color.off)
@@ -91,5 +81,5 @@ struct MainView_Previews: PreviewProvider {
 // 콜 수락은 dialog 띄우고 타이머 5초 유지
 // after 승객 하차, 요금 결제 다이얼로그 띄우기
 
-// car status(0: 빈차 및 on, 1: 예약, 2: 퇴근 및 승차)
+// car status(0: 빈차, 1: 승차, 2: 하차)
 // 상단에 택시 상태 문구 표시...
