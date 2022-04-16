@@ -35,7 +35,7 @@ struct MainView: View {
                 .font(Font.body.bold())
                 .frame(width: 220)
                 
-                Button(action: {}) {
+                Button(action: {viewModel.setStatus(status: TaxiStatus.off)}) {
                     Text("하차")
                         .frame(width: 220, height: 50)
                 }
