@@ -14,6 +14,8 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
+            //택시 상태 텍스트로 표시 예정
+            
             VStack(alignment: .center, spacing: 30) {
                 Button(action: {viewModel.setStatus(status: TaxiStatus.empty)}) {
                     Text("빈 차")
@@ -49,9 +51,7 @@ struct MainView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: ProfileView()) {
                             Image(systemName: "person")
-                            
                     }
-                    
                 }
             }
             .onAppear {
@@ -61,12 +61,14 @@ struct MainView: View {
             }
             
             .alert(isPresented: $viewModel.reserveAlert) {
-                Alert(title: Text("HeyTaxi"), message: Text("콜 수락하시겠습니까? \(String(describing: viewModel.reservationInfo!.call.dst))"), primaryButton: .destructive(Text("수락"))
+                Alert(title: Text("HeyTaxi"), message: Text("콜 수락하시겠습니까?\n\r \(viewModel.address)"), primaryButton: .destructive(Text("수락"))
                       {viewModel.allowReservation()}
                       , secondaryButton: .cancel(Text("거절"))
                       {viewModel.rejectReservation()}
                 )
             }
+            
+//            .alert(isPresented: $viewModel.userLocationAlert)
             
         }.navigationBarHidden(true)
     }

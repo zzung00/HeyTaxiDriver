@@ -18,9 +18,12 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     @Published var authorizationStatus: CLAuthorizationStatus
     private let locationManager: CLLocationManager
     @Published var lastSeenLocation: CLLocation?
+    let geocoder = CLGeocoder()
     private var status = TaxiStatus.off
     @Published var reserveAlert: Bool = false
     @Published var reservationInfo: ReservationModel?
+    @Published var userLocationAlert: Bool = false
+    @Published var address = ""
     
     override init() {
         locationManager = CLLocationManager()
@@ -86,6 +89,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
         
         socketClient.sendMessage(message: result!, toDestination: "/app/reservation/allow", withHeaders: ["Authorization" : TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)!, "content-type": "application/json"], withReceipt: nil)
         status = TaxiStatus.reservation
+        userLocationAlert = true
     }
     
     func rejectReservation() {
@@ -111,7 +115,18 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
             reserveAlert = true
             status = TaxiStatus.off
             reservationInfo = try! decoder.decode(ReservationModel.self, from: data)
-            print(reservationInfo)
+            
+            geocoder.reverseGeocodeLocation(CLLocation(latitude: reservationInfo!.call.src.latitude, longitude: reservationInfo!.call.src.longitude)) {
+                (placemarks, error) in
+                if (error != nil) {
+                    print("error in reverseGeocode!!!")
+                }
+                let placemark = placemarks! as [CLPlacemark]
+                if placemark.count > 0 {
+                    let placemark = placemarks![0]
+                    self.address = placemark.administrativeArea! + " " + placemark.locality! + " " + placemark.subLocality! + " " + placemark.subThoroughfare!
+                }
+            }
         default:
             return
         }
