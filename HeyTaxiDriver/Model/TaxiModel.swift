@@ -24,5 +24,6 @@ struct TaxiModel: Codable {
 enum TaxiStatus: Codable {
     case empty
     case reservation
+    case boarding
     case off
 }
