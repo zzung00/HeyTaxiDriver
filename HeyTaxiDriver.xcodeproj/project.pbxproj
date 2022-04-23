@@ -25,6 +25,7 @@
 		E25605E227AA396700EFC181 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25605E127AA396700EFC181 /* SplashViewModel.swift */; };
 		E25921AD27B79904004379D6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25921AC27B79904004379D6 /* ProfileViewModel.swift */; };
 		E260A3EE27AE5AE10043CD53 /* VerifiedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A3ED27AE5AE10043CD53 /* VerifiedViewModel.swift */; };
+		E2667A2E2813D4D900E06DBE /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2667A2D2813D4D900E06DBE /* ReservationView.swift */; };
 		E2754F3227FC311E0002C0E4 /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2754F3127FC311E0002C0E4 /* CallModel.swift */; };
 		E277E6882802AFFE00E640F1 /* ReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E277E6872802AFFE00E640F1 /* ReservationModel.swift */; };
 		E278324827A6E5F10061E6D7 /* VerifiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278324727A6E5F10061E6D7 /* VerifiedView.swift */; };
@@ -83,6 +84,7 @@
 		E25605E127AA396700EFC181 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		E25921AC27B79904004379D6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		E260A3ED27AE5AE10043CD53 /* VerifiedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedViewModel.swift; sourceTree = "<group>"; };
+		E2667A2D2813D4D900E06DBE /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
 		E2754F3127FC311E0002C0E4 /* CallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallModel.swift; sourceTree = "<group>"; };
 		E277E6872802AFFE00E640F1 /* ReservationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationModel.swift; sourceTree = "<group>"; };
 		E278324727A6E5F10061E6D7 /* VerifiedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedView.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				E278324727A6E5F10061E6D7 /* VerifiedView.swift */,
 				E278324B27A6E8A20061E6D7 /* VerifyView.swift */,
 				E2C89CA027B4F82C00A12705 /* ProfileView.swift */,
+				E2667A2D2813D4D900E06DBE /* ReservationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				E209837127A6775B002A6E91 /* HeyTaxiService.swift in Sources */,
 				E29D9FF827AD5AC40078392B /* VerifyViewModel.swift in Sources */,
 				E260A3EE27AE5AE10043CD53 /* VerifiedViewModel.swift in Sources */,
+				E2667A2E2813D4D900E06DBE /* ReservationView.swift in Sources */,
 				E2ED5D8E27A67A93003CF311 /* TaxiModel.swift in Sources */,
 				E285A04027AF9ACF007238BC /* MainViewModel.swift in Sources */,
 				E285A04327AFB131007238BC /* TokenUtils.swift in Sources */,

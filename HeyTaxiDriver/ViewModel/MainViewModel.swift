@@ -22,7 +22,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     private var status = TaxiStatus.off
     @Published var reserveAlert: Bool = false
     @Published var reservationInfo: ReservationModel?
-    @Published var userLocationAlert: Bool = false
+    @Published var isReservation: Bool = false
     @Published var address = ""
     
     override init() {
@@ -89,7 +89,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
         
         socketClient.sendMessage(message: result!, toDestination: "/app/reservation/allow", withHeaders: ["Authorization" : TokenUtils.getToken(serviceID: HeyTaxiService.baseUrl)!, "content-type": "application/json"], withReceipt: nil)
         status = TaxiStatus.reservation
-        userLocationAlert = true
+        isReservation = true
     }
     
     func rejectReservation() {
