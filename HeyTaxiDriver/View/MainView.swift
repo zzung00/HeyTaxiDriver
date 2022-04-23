@@ -14,7 +14,11 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            //택시 상태 텍스트로 표시 예정
+            //택시 상태 텍스트로 표시 추가 예정
+            if viewModel.userLocationAlert == true {
+                //새로운 bottom sheet 생성 후, 기존 메인 화면에 빈차(empty)와 퇴근(off) 표시
+                //new sheet에 승객의 src, dst, 승차(reservation)와 하차(off) 표시
+            }
             
             VStack(alignment: .center, spacing: 30) {
                 Button(action: {viewModel.setStatus(status: TaxiStatus.empty)}) {
@@ -67,8 +71,6 @@ struct MainView: View {
                       {viewModel.rejectReservation()}
                 )
             }
-            
-//            .alert(isPresented: $viewModel.userLocationAlert)
             
         }.navigationBarHidden(true)
     }
