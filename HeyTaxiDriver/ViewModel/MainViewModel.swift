@@ -19,7 +19,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, Stom
     private let locationManager: CLLocationManager
     @Published var lastSeenLocation: CLLocation?
     let geocoder = CLGeocoder()
-    private var status = TaxiStatus.off
+    @Published var status = TaxiStatus.off
     @Published var reserveAlert: Bool = false
     @Published var reservationInfo: ReservationModel?
     @Published var isReservation: Bool = false
