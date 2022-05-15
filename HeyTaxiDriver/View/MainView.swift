@@ -14,13 +14,16 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            //택시 상태 텍스트로 표시 추가 예정
             VStack(alignment: .center, spacing: 30) {
                 if viewModel.status == TaxiStatus.reservation {
                     Text("예약 중...")
+                        .font(Font.custom("JalnanOTF", size: 30))
+                        .foregroundColor(.mainGreen)
                 }
                 else if viewModel.status == TaxiStatus.boarding {
                     Text("승차 중...")
+                        .font(Font.custom("JalnanOTF", size: 30))
+                        .foregroundColor(.mainGreen)
                 }
                 
                 Button(action: {viewModel.setStatus(status: TaxiStatus.empty)}) {
@@ -43,15 +46,15 @@ struct MainView: View {
                 .font(Font.body.bold())
                 .frame(width: 220)
                 
-//                Button(action: {viewModel.setStatus(status: TaxiStatus.off)}) {
-//                    Text("하차")
-//                        .frame(width: 220, height: 50)
-//                }
-//                .background(Color.empty)
-//                .cornerRadius(10)
-//                .foregroundColor(.white)
-//                .font(Font.body.bold())
-//                .frame(width: 220)
+                Button(action: {viewModel.setStatus(status: TaxiStatus.off)}) {
+                    Text("하차")
+                        .frame(width: 220, height: 50)
+                }
+                .background(Color.mainGreen)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                .font(Font.body.bold())
+                .frame(width: 220)
                     
                 Button(action: {viewModel.setStatus(status: TaxiStatus.off)}) {
                     Text("퇴근")
@@ -93,8 +96,3 @@ struct MainView_Previews: PreviewProvider {
     }
 }
 
-// 콜 수락은 dialog 띄우고 타이머 5초 유지
-// after 승객 하차, 요금 결제 다이얼로그 띄우기
-
-// car status(0: 빈차, 1: 승차, 2: 하차)
-// 상단에 택시 상태 문구 표시...
